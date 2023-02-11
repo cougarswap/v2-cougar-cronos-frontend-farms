@@ -1,0 +1,16 @@
+{
+  "short_name": "CougarSwap Poly",
+  "name": "CougarSwap Poly",
+  "description": "Farm COUGAR with CougarSwap LP Tokens",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#589e7f",
+  "background_color": "#25262d"
+}

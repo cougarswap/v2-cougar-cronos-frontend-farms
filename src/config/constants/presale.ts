@@ -1,0 +1,4 @@
+export const TOTAL_PRESALE_AMOUNT = 1500000
+export const TOTAL_SUPPLY_AMOUNT = 5000000
+export const CAKE_PRESALE_PRICE = 0.1
+export const CAKE_LISTING_PRICE = 0.2
