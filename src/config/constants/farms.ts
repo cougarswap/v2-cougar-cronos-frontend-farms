@@ -47,7 +47,7 @@ const farms: FarmConfig[] = [
   {
     enabled: true,
     isNewPool: true,
-    pid: lpTokens.pairs.cgsWcro.pid,
+    pid: lpTokens.pairs.cgsUsdc.pid,
     risk: 5,
     lpSymbol: 'CGS-USDC',
     lpAddresses: {

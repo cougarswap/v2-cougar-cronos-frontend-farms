@@ -21,7 +21,7 @@ const PresaleCountdownContainer = styled(PresaleStyledCard)`
 const PresaleStartTimeHeader = styled(Heading)`
   font-size: 2em;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.primaryBright};
+  color: ${({ theme }) => theme.colors.primary};
   text-align: center;
   margin: 10px auto;
 `
@@ -74,7 +74,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(166deg, #143c78 20%, #464f99 80%);
+  background: linear-gradient(166deg, #FFAD02 20%, #FF6C02 80%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 33px;
 

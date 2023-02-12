@@ -22,30 +22,22 @@ const Hero = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: auto;  
-  height: 150px;
   text-align: center;  
-  background-color: #0c15307a;
 
   ${({ theme }) => theme.mediaQueries.lg} {        
     position: relative;
-    height: 300px;
 
     &::after {
       content: "";
-        background: url('/images/egg/home_banner.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        border-radius: 25px;
-        height: 300px;
-        padding-top: 0;
-        opacity: 0.8;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;   
+      border-radius: 25px;
+      padding-top: 0;
+      opacity: 0.8;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;   
     }
   }
 
@@ -64,7 +56,7 @@ const TextHeading = styled(Text)`
   font-size: 2.5em;
   font-weight: 700;  
   font-size: 72px;
-  background: -webkit-linear-gradient(#cb51ff, #8fbcff);
+  background: -webkit-linear-gradient(#FFAD02, #FF6C02);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
@@ -76,7 +68,7 @@ const TextHeading = styled(Text)`
 
 const TextSubHeading = styled(Text)`
   font-weight: 700;  
-  color: ${({ theme }) => theme.colors.primaryBright};
+  color: #e9a218;
 `
 
 const PageBodyContainer = styled.div`

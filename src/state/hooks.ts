@@ -215,8 +215,8 @@ export const usePriceCakeBusd = (): BigNumber => {
   // return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
   const {pid} = lpToken.pairs.cgsUsdc; // EGG-BUSD LP
   const farm = useFarmFromPid(pid);
-  // return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
-  return new BigNumber(1) // anhpv
+  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
+  // return new BigNumber(1) // anhpv
 }
 
 export const usePrices = () => {

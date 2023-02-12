@@ -41,11 +41,11 @@ const App: React.FC = () => {
   //   console.warn = () => null
   // }, [])
 
-  // usePollBlockNumber()
-  // useEagerConnect()
-  // useFetchPublicData()
+  usePollBlockNumber()
+  useEagerConnect()
+  useFetchPublicData()
   // useFetchCakeVault()
-  // usePresaleDataOption(PresaleOption.OPTION_1, account)
+  usePresaleDataOption(PresaleOption.OPTION_1, account)
 
   return (
     <Router>
