@@ -6,7 +6,7 @@ import useI18n from 'hooks/useI18n'
 const Container = styled.div`
   width: 100%;
   /* background: ${({ theme }) => theme.card.background}; */
-  background-color: rgb(16 12 12 / 82%);
+  background-color:#fdfdfdd6;
   border-radius: 16px;
   margin: 16px 0px;
 `

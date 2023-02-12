@@ -90,6 +90,6 @@ export const fetchLPQuote = async (lpAddress: string, quotePrice: number, quoteS
     return [tokenPriceData, lpPriceData];
 }
 
-export const fetchPlatformUsdPrice = async() => fetchLPQuote(farmTokens.wMaticUsdc, 1);
+export const fetchPlatformUsdPrice = async() => fetchLPQuote(farmTokens.wcroUsdc, 1);
 export const fetchTokenUsdPrice = async() => fetchLPQuote(farmTokens.cgsUsdc, 1);
-export const fetchCgsMaticPrice = async(quotePrice: number) => fetchLPQuote(farmTokens.cgsMatic, quotePrice, 'WMATIC'); 
+export const fetchCgsCroPrice = async(quotePrice: number) => fetchLPQuote(farmTokens.cgsWcro, quotePrice, 'WCRO'); 

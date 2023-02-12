@@ -38,7 +38,7 @@ export const useFetchPublicData = () => {
     dispatch(fetchMasterChefPublicDataAsync())
     dispatch(fetchFarmsPublicDataAsync())
     dispatch(fetchPoolsPublicDataAsync())
-    dispatch(fetchPartnerPoolsPublicDataAsync())
+    // dispatch(fetchPartnerPoolsPublicDataAsync())
   }, [dispatch, slowRefresh])
 }
 
@@ -179,19 +179,20 @@ export const useReferrals = (account): any => {
 
 // Prices
 
-export const usePriceMaticBusd = (): BigNumber => {
-  const {pid} = lpToken.pairs.wMaticUsdc // BUSD-BNB LP
+export const usePriceBnbBusd = (): BigNumber => {
+  const {pid} = lpToken.pairs.cgsUsdc // BUSD-BNB LP anhpvfake croUsdc-cgsUsdc
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+  // return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+  return new BigNumber(1) // anhpv
 }
 
-export const usePriceCgsMatic = (): BigNumber => {
-  const {pid} = lpToken.pairs.cgsMatic 
-  const farm = useFarmFromPid(pid)
+// export const usePriceCgsMatic = (): BigNumber => {
+//   const {pid} = lpToken.pairs.croWbtc 
+//   const farm = useFarmFromPid(pid)
   
-  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+//   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
 
-}
+// }
 
 // export const usePriceBnbBusd = (): BigNumber => {
 //   const {pid} = lpToken.pairs.bnbBusdBeam // BUSD-BNB LP
@@ -215,7 +216,7 @@ export const usePriceCakeBusd = (): BigNumber => {
   const {pid} = lpToken.pairs.cgsUsdc; // EGG-BUSD LP
   const farm = useFarmFromPid(pid);
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
-  // return new BigNumber(1);
+  // return new BigNumber(1) // anhpv
 }
 
 export const usePrices = () => {
@@ -225,9 +226,9 @@ export const usePrices = () => {
 
 export const useTotalValue = (): BigNumber => {
   const farms = useFarms();
-  const bnbPrice = usePriceMaticBusd();
+  const bnbPrice = usePriceBnbBusd();
   // const btcPriceToBnb = usePriceWbtcBnb();  
-  const cgsMaticPriceToBnb = usePriceCgsMatic();
+  // const cgsMaticPriceToBnb = usePriceCgsMatic();
   const cakePrice = usePriceCakeBusd();
   let value = new BigNumber(0);
 
@@ -241,7 +242,7 @@ export const useTotalValue = (): BigNumber => {
           val = new BigNumber(0);
       }
       else 
-        if (farm.quoteTokenSymbol === QuoteToken.MATIC) {
+        if (farm.quoteTokenSymbol === QuoteToken.CRO) {
           val = (bnbPrice.times(farm.lpTotalInQuoteToken));
         } else 
         if (farm.quoteTokenSymbol === QuoteToken.CGS) {

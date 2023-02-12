@@ -59,7 +59,7 @@ const Wrapper = styled.tr`
   position: relative;
   font-size: 0.8em;  
   margin: 0;  
-  border-bottom: 1px solid #473e6c;  
+  border-bottom: 1px solid #5f7e61;  
   &>td {
     padding: 20px 20px 20px 0;
   }
@@ -178,6 +178,7 @@ const InfoColumn = styled.div`
 
 const TextTitle = styled(Text)`
   color: ${({theme}) => theme.colors.textTitleFarm};
+  text-align: center;
   font-size: 14px;
 `
 

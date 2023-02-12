@@ -6,20 +6,19 @@ BigNumber.config({
   DECIMAL_PLACES: 80,
 })
 
-export const BSC_BLOCK_TIME = 2.1 // poly AVERAGE_BLOCK_TIME_IN_SECSS
+export const BSC_BLOCK_TIME = 5.8 // poly AVERAGE_BLOCK_TIME_IN_SECSS
 
-export const BASE_BSC_SCAN_URLS = 'https://polygonscan.com/'
-export const BASE_STELLA_SWAP_URL = 'https://polygondex.cougarswap.io/#/'
-export const BASE_SOLARFLARE_SWAP_URL = 'https://solarflare.io/'
-export const BASE_BEAM_SWAP_URL = 'https://polygondex.cougarswap.io/#/'
-export const BASE_CONVERGENCE_SWAP_URL = 'https://convx.conv.finance/'
+export const BASE_BSC_SCAN_URLS = 'https://cronoscan.com/'
+export const BASE_VVSFINANCE_SWAP_URL = 'https://cronosdex.cougarswap.io/#/'
+export const BASE_CRONA_SWAP_URL = 'https://app.cronaswap.org/'
+export const BASE_COUGAR_EXCHANGE_URL = 'https://cgx.finance/'
 export const BASE_MMF_URL = 'https://mm.finance/'
-export const BASE_BLOCK_COUNTDOWN = 'https://polygonscan.com/'
+export const BASE_BLOCK_COUNTDOWN = 'https://cronoscan.com'
 
 
-export const BASE_COUGAR_SWAP_URL = 'https://polygondex.cougarswap.io/#/'
+export const BASE_COUGAR_SWAP_URL = 'https://cronosdex.cougarswap.io/#/'
 
-export const CAKE_PER_BLOCK = new BigNumber(50)
+export const CAKE_PER_BLOCK = new BigNumber(5)
 export const BLOCKS_PER_DAY = new BigNumber((60 / BSC_BLOCK_TIME) * 60 * 24)
 export const BLOCKS_PER_YEAR = new BigNumber((60 / BSC_BLOCK_TIME) * 60 * 24 * 365)
 export const CAKE_POOL_PID = 1

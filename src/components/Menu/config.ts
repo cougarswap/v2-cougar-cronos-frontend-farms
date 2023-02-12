@@ -9,7 +9,7 @@ const config: MenuEntry[] = [
   {
     label: 'Legacy (v1)',
     icon: 'JungleIcon',
-    href: 'https://legacy-polyapp.cougarswap.io/',
+    href: 'https://legacy-cronosapp.cougarswap.io/',
     calloutClass: 'highlight' 
   },
   {
@@ -18,15 +18,15 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://polydex.cougarswap.io/#/swap'
+        href: 'https://cronosdex.cougarswap.io/#/swap'
       },  
       {
         label: 'Liquidity',
-        href: 'https://polydex.cougarswap.io/#/pool'
+        href: 'https://cronosdex.cougarswap.io/#/pool'
       },
        {
         label: 'Buy CGS',
-        href: 'https://polygondex.cougarswap.io/#/swap?outputCurrency=0x0b265919F1B9285FE283010A874b2BEae32D731E'
+        href: 'https://cronosdex.cougarswap.io/#/swap?outputCurrency=0xCBfb4bE9dBbaD51A794B10AaCaC0E5341777d398'
       },     
     ],
   },
@@ -49,127 +49,99 @@ const config: MenuEntry[] = [
     label: 'Pools',
     icon: 'Pool2Icon',
     href: '/nests',
-  },    
+  },       
   {
     label: 'Vaults',
     icon: 'PoolIcon',
     href: '/vaults',
-  },   
-  {
-    label: 'CBank', 
-    icon: 'IfoIcon',         
-    href: '/cbank'  
-  },      
+  },  
+  // {
+  //   label: 'CBank', 
+  //   icon: 'IfoIcon',         
+  //   href: '/cbank'  
+  // },      
   {
     label: 'Referral',
     icon: 'Groups2Icon', 
     href: '/referrals'   
-  },  
-  {
-    label: 'Future',
-    icon: 'FaucetIcon',
-    items: [
-      {
-        label: 'Launch Pad (soon)',          
-        href: '#launchPad'
-      }, 
-      {
-        label: 'CVaults (soon)',        
-        href: '#cvaults' 
-      },        
-    ]
-  },
-  {
-    label: 'Bridge',
-    icon: 'BridgeIcon',    
-    items: [
-      {
-        label: 'MultiChain Bridge',
-        href: 'https://multichain.xyz/'
-      },
-      {
-        label: 'EvoDefi Bridge',
-        href: 'https://bridge.evodefi.com/'
-      },
-      {
-        label: 'Anyswap',
-        href: 'https://anyswap.exchange/#/bridge'
-      },
-      {
-        label: 'CougarBridge',
-        href: 'https://bridge.cougarswap.io/'
-      },
-    ]
   },    
-  {
-    label: 'Audit',
-    icon: 'Audit2Icon',
-    href: 'https://cougarecosystem.gitbook.io/polycougarswap/security/audits-and-reviews'
-  },   
   // {
-  //   label: 'Highlight Features',
-  //   icon: 'SunIcon',    
-  //   href: 'https://cougarecosystem.gitbook.io/polycougarswap/feature/highlight-features' 
-  // }, 
-  // {
-  //   label: 'Chart',
-  //   icon: 'AnalyticsIcon',    
-  //   href: '/chart'
-  // },  
-  // {
-  //   label: 'Graph',
-  //   icon: 'InfoIcon',    
-  //   items: [         
+  //   label: 'Bridge',
+  //   icon: 'BridgeIcon',    
+  //   items: [
   //     {
-  //       label: 'DexScreener',
-  //       href: 'https://dexscreener.com/moonbeam/0x0b265919F1B9285FE283010A874b2BEae32D731E',
-  //     }    
+  //       label: 'Cougar Bridge',
+  //       href: 'https://bridge.cougarswap.io'
+  //     }, 
+  //     {
+  //       label: 'Any Swap',
+  //       href: 'https://anyswap.exchange/#/router'
+  //     },     
+  //     {
+  //       label: 'EVOdefi Bridge',
+  //       href: 'https://bridge.evodefi.com'
+  //     },     
+  //     {
+  //       label: 'Cronos Bridge',
+  //       href: 'https://cronos.crypto.org/docs/bridge/cdcex.html'
+  //     }        
   //   ]
-  // },     
+  // },    
+  // {
+  //   label: 'Audit',
+  //   icon: 'Audit2Icon',
+  //   href: 'https://cougarswap.gitbook.io/cronoscougarswap/security/audits-and-reviews'
+  // },    
   {
-    label: 'Listings',
-    icon: 'HamburgerIcon',
-    items: [     
-      {
-        label: 'CoinMarketCap',
-        href: 'https://coinmarketcap.com/currencies/cougar/',
-      },
-      {
-        label: 'CoinGecko',
-        href: 'https://www.coingecko.com/en/coins/cougar-token',
-      },
-      {
-        label: 'DappRadar',
-        href: 'https://dappradar.com/polygon/defi/polycougar',
-      },
-      {
-        label: 'Defi Llama',
-        href: 'https://defillama.com/protocol/cougarswap',
-      },
-    ],
-  },  
+    label: 'Graphs',
+    icon: 'ChartIcon',
+    href: 'https://dexscreener.com/cronos/0xCBfb4bE9dBbaD51A794B10AaCaC0E5341777d398'
+  },
+  // {
+  //   label: 'Listings',
+  //   icon: 'HamburgerIcon',
+  //   items: [     
+  //     {
+  //       label: 'CoinMarketCap',
+  //       href: 'https://coinmarketcap.com/currencies/cougar/',
+  //     },     
+  //     {
+  //       label: 'Cronos Explorer',
+  //       href: 'https://cronoscan.com/address/0xCBfb4bE9dBbaD51A794B10AaCaC0E5341777d398/transactions',
+  //     },
+  //     {
+  //       label: 'Defi Llama',
+  //       href: 'https://defillama.com/protocol/cougarswap',
+  //     },
+  //   ],
+  // }, 
   {
-    label: 'More',
-    icon: 'MoreIcon',
-    items: [     
-      {
-        label: "Docs",
-        href: "https://cougarecosystem.gitbook.io/polycougarswap/",
-      },  
-      {
-        label: 'Presale Infomation',
-        href: 'https://cougarecosystem.gitbook.io/polycougarswap/presale-information'
-      },
-      {
-        label: 'Roadmap',        
-        href: 'https://cougarecosystem.gitbook.io/polycougarswap/roadmap',
-      },   
-      {
-        label: 'Tokenomics',        
-        href: 'https://cougarecosystem.gitbook.io/polycougarswap/tokenomic/cougar-tokenomic',
-      },        
-    ],
-  },  
+    label: 'Partner Application Form',
+    icon: 'TicketIcon',
+    href: 'https://forms.gle/UNhhuUfuw24uwNdV7'
+  },
+  // {
+  //   label: 'More',
+  //   icon: 'MoreIcon',
+  //   items: [     
+  //     {
+  //       label: "Docs",
+  //       href: "https://cougarecosystem.gitbook.io/cronoscougarswap/",
+  //     },  
+  //     // {
+  //     //   label: 'Presale Infomation',
+  //     //   href: 'https://cougarecosystem.gitbook.io/cronoscougarswap/presale-information'
+  //     // },
+  //     {
+  //       label: 'Roadmap',        
+  //       href: 'https://cougarecosystem.gitbook.io/cronoscougarswap/roadmap',
+  //     },   
+  //     {
+  //       label: 'Tokenomics',        
+  //       href: 'https://cougarecosystem.gitbook.io/cronoscougarswap/tokenomic/cougar-tokenomic',
+  //     },       
+  //   ],
+  // },  
 ]
 
 export default config

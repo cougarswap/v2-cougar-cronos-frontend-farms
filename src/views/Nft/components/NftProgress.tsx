@@ -5,9 +5,9 @@ import { BSC_BLOCK_TIME } from 'config'
 import useI18n from 'hooks/useI18n'
 import getTimePeriods from 'utils/getTimePeriods'
 import formatTimePeriod from 'utils/formatTimePeriod'
+import { useBlock } from 'state/block/hooks'
 import { NftProviderContext } from '../contexts/NftProvider'
 import InfoRow from './InfoRow'
-import { useBlock } from 'state/block/hooks'
 
 const TimeLeft = styled(Heading)`
   margin-bottom: 16px;
@@ -72,7 +72,7 @@ const NftProgress = () => {
             {!isInitialized ? (
               '...'
             ) : (
-              <Link href={`https://polygonscan.com/block/${endBlockNumber}`} target="_blank" rel="noreferrer noopener">
+              <Link href={`https://cronoscan.com/block/${endBlockNumber}`} target="_blank" rel="noreferrer noopener">
                 {`Block ${endBlockNumber}`}
                 <OpenNewIcon color="primary" ml="2px" />
               </Link>

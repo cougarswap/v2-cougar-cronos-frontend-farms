@@ -145,7 +145,7 @@ export default function SwapForMigration() {
                             : t('Exceeded max CGS(old) entry')}
                     </Text>
                 )}
-                <Text color="textSubtle" fontSize="12px" mb="16px" bold>
+                <Text color="text" fontSize="12px" mb="16px" bold>
                     {t('Balance: %balance%', {
                         balance: getBalanceAmount(cgsOldBalance, 18).toFixed(2),
                     })}
@@ -168,13 +168,13 @@ export default function SwapForMigration() {
                 </Flex>
                 <BalanceInput
                     aria-disabled
-                    // value={value}
-                    value={Number(value) *10000/BuyTokenPerCGS} // for poly
+                    value={value}
+                    // value={Number(value) *10000/BuyTokenPerCGS} // for poly
                     onUserInput={setValue}
                     decimals={18}                    
                     mb="8px"
                 />
-                <Text color="textSubtle" fontSize="12px" mb="16px" bold>
+                <Text color="text" fontSize="12px" mb="16px" bold>
                     {t('Balance: %balance%', {
                         balance: getBalanceAmount(cgsNewBalance, 18).toFixed(2),
                     })}

@@ -28,7 +28,7 @@ const StyledLink = styled(Link)`
 const HelpButton = () => {
   return (
     <Container>
-      <StyledLink external href="https://cougarecosystem.gitbook.io/polycougarswap/product/cougar-vaults">
+      <StyledLink external href="https://cougarswap.gitbook.io/cronoscougarswap/product/cougar-vaults">
         <Button px={['14px', null, null, null, '20px']} variant="primary">
           <ButtonText color="primary" bold fontSize="16px">
             Help

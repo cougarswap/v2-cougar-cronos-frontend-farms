@@ -17,7 +17,7 @@ const Wrapper = styled.tr`
   position: relative;
   font-size: 0.8em;  
   margin: 0;  
-  border-bottom: 1px solid #473e6c;  
+  border-bottom: 1px solid #5f7e61;  
   &>td {
     padding: 20px 20px 20px 0;
   }
@@ -226,7 +226,7 @@ const RowVaultHeading : React.FC<RowVaultHeadingProps> = (
                   {interest?.totalApr && interest?.totalApr > 0 ? 
                     <>
                       <span ref={targetRef}>
-                        <HelpIcon />
+                        <HelpIcon color='textProper'/>
                       </span>
                       {middleVisible && tooltipMiddle}
                     </> : null

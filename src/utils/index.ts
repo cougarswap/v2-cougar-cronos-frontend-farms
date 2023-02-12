@@ -1,13 +1,5 @@
 import BigNumber from 'bignumber.js'
-import {
-  BASE_BLOCK_COUNTDOWN,
-  BASE_BSC_SCAN_URLS,
-  BASE_BEAM_SWAP_URL,
-  BASE_STELLA_SWAP_URL,
-  BASE_COUGAR_SWAP_URL,
-  BASE_CONVERGENCE_SWAP_URL,
-  BASE_SOLARFLARE_SWAP_URL,
-} from 'config'
+import { BASE_BLOCK_COUNTDOWN, BASE_BSC_SCAN_URLS, BASE_COUGAR_EXCHANGE_URL, BASE_COUGAR_SWAP_URL } from 'config'
 import { DexSwapPatch, DexSwapRouter } from 'config/constants/types'
 
 export { default as formatAddress } from './formatAddress'
@@ -40,39 +32,52 @@ export function getBscScanLink(
 }
 
 export function getDexUrl(dex: DexSwapRouter): string {
-  // if (dex === DexSwapRouter.SOLARFLARE) {
-  //   return BASE_SOLARFLARE_SWAP_URL
+  if (dex === DexSwapRouter.COUGAREXCHANGE) {
+    return BASE_COUGAR_EXCHANGE_URL;
+  }
+  // if (dex === DexSwapRouter.MEERKATFINANCE) {
+  //   return BASE_MMF_URL;
   // }
-  // if (dex === DexSwapRouter.Convergence) {
-  //   return BASE_CONVERGENCE_SWAP_URL
-  // }
-  return BASE_STELLA_SWAP_URL
+  return BASE_COUGAR_SWAP_URL;
 }
 
-export function getLiquidityUrl(dex: DexSwapRouter, tokenPath: string, isTokenOnly?: boolean): string {
-  const baseDexUrl = getDexUrl(dex)
+export function getLiquidityUrl(dex: DexSwapRouter, tokenPath: string, isTokenOnly?: boolean): string {  
+  const baseDexUrl = getDexUrl(dex);
+  // const baseDexUrl = BASE_COUGAR_SWAP_URL
 
   if (isTokenOnly) {
-    switch (dex) {
-      case DexSwapRouter.BEAM:
-        return `${baseDexUrl}${DexSwapPatch.BEAM}/swap?outputCurrency=${tokenPath}`
-      case DexSwapRouter.Convergence:
-        return `${baseDexUrl}${DexSwapPatch.CONV}/swap?outputCurrency=${tokenPath}`
-      case DexSwapRouter.SOLARFLARE:
-        return `https://solarflare.io/exchange/stable-pool`;
+    // if (dex === DexSwapRouter.CRONASWAP) {
+    //   return `${baseDexUrl}swap/${tokenPath}`;
+    // }
+    // return `${baseDexUrl}swap?outputCurrency=${tokenPath}`;
+    switch (dex){
+      case DexSwapRouter.VVSFINANCE: 
+        return `${baseDexUrl}${DexSwapPatch.VVSFINANCE}/swap?outputCurrency=${tokenPath}`;
+      case DexSwapRouter.COUGAREXCHANGE: 
+        return `${baseDexUrl}swap?outputCurrency=${tokenPath}`;
+      case DexSwapRouter.MEERKATFINANCE: 
+        return `${baseDexUrl}${DexSwapPatch.MEERKATFINANCE}/swap?outputCurrency=${tokenPath}`;
+      case DexSwapRouter.CRONASWAP: 
+        return `${baseDexUrl}${DexSwapPatch.CRONASWAP}/swap?outputCurrency=${tokenPath}`;
       default:
-        return `${baseDexUrl}swap?outputCurrency=${tokenPath}`
+        // VVS Finance is default
+        return `${baseDexUrl}/swap?outputCurrency=${tokenPath}`;
     }
   }
 
-  if (dex === DexSwapRouter.BEAM) {
-    return `${baseDexUrl}add/${DexSwapPatch.BEAM}/${tokenPath}`
+  switch (dex){
+    case DexSwapRouter.COUGAREXCHANGE: 
+      return `${baseDexUrl}add/${tokenPath}`;
+    case DexSwapRouter.MEERKATFINANCE: 
+      return `${baseDexUrl}${DexSwapPatch.MEERKATFINANCE}/add/${tokenPath}`;
+    case DexSwapRouter.CRONASWAP: 
+      return `${baseDexUrl}${DexSwapPatch.CRONASWAP}/add/${tokenPath}`;
+    default:
+      // VVS Finance is defailt
+      return `${baseDexUrl}${DexSwapPatch.VVSFINANCE}/add/${tokenPath}`;
   }
-  if (dex === DexSwapRouter.Convergence) {
-    return `${baseDexUrl}add/${DexSwapPatch.CONV}/${tokenPath}`
-  }  
-  if (dex === DexSwapRouter.SOLARFLARE) {
-    return `${baseDexUrl}add/${DexSwapPatch.SOLARFLARE}/${tokenPath}`
-  }
-  return `${baseDexUrl}add/${tokenPath}`
+  // if (dex === DexSwapRouter.CRONASWAP) {
+  //   return `${baseDexUrl}add/${tokenPath}`;
+  // }
+  // return `${baseDexUrl}add/${tokenPath}`;
 }

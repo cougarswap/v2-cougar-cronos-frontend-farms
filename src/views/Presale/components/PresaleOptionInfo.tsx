@@ -5,7 +5,6 @@ import Card from 'components/layout/Card'
 import styled from 'styled-components';
 import Flex from 'components/layout/Flex';
 import moment from 'moment'
-import { BASE_STELLA_SWAP_URL } from 'config';
 import { useWeb3React } from '@web3-react/core';
 import { useDispatch } from 'react-redux';
 import { PresaleOption } from 'state/types';
@@ -172,7 +171,7 @@ const PresaleOptionInfo: React.FC<PresaleOptionInfoProps> = ({
         return progressSteps
     }, [currentMillis, saleDateStart, saleDateEnd, releaseActive])
 
-    const usdcLiquidityUrl = `${BASE_STELLA_SWAP_URL}swap?outputCurrency=${getUsdcAddress()}`
+    const usdcLiquidityUrl = `https://cronosdex.cougarswap.io/#/swap?outputCurrency=${getUsdcAddress()}`
 
     return (
         <PresaleInfoContainer>

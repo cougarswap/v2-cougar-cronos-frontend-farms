@@ -46,8 +46,8 @@ export interface DexTagProps {
 }
 
 const DexTag : React.FC<DexTagProps> = ({dex, borderRadius}) => {
-    const text = dex === DexSwapRouter.STELLA ? 'VVSFINANCE' : 'CRONASWAP'
-    const color = dex === DexSwapRouter.STELLA ? '#5dcdd6' : '#8c8bbf'
+    const text = dex === DexSwapRouter.VVSFINANCE ? 'VVSFINANCE' : 'CRONASWAP'
+    const color = dex === DexSwapRouter.VVSFINANCE ? '#5dcdd6' : '#8c8bbf'
     return (
         <Container color={color} borderRadius={borderRadius}>
             <TextStyled color={color}>{text}</TextStyled>

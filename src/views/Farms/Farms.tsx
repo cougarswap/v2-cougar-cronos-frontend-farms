@@ -8,7 +8,7 @@ import { Image, Heading, Text, Toggle } from '@pancakeswap-libs/uikit'
 import { BLOCKS_PER_DAY, BLOCKS_PER_YEAR, CAKE_PER_BLOCK } from 'config'
 import Page from 'components/layout/Page'
 // import { useFarms, usePriceGlmrBusd, usePriceCakeBusd, usePriceWbtcBnb, usePriceBnbBusd } from 'state/hooks'
-import { useFarms,  usePriceCakeBusd, usePriceMaticBusd } from 'state/hooks'
+import { useFarms,  usePriceCakeBusd, usePriceBnbBusd } from 'state/hooks'
 import useRefresh from 'hooks/useRefresh'
 import { fetchFarmUserDataAsync } from 'state/actions'
 import { QuoteToken } from 'config/constants/types'
@@ -128,7 +128,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const TranslateString = useI18n()
   const farmsLP = useFarms()
   const cakePrice = usePriceCakeBusd()
-  const maticPrice = usePriceMaticBusd()
+  const bnbPrice = usePriceBnbBusd()
   // const btcPriceToBnb = usePriceWbtcBnb()
   // const bnbPriceToBusd = usePriceBnbBusd()
   
@@ -207,8 +207,8 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           totalValue = BIG_ZERO
         }
 
-        if (farm.quoteTokenSymbol === QuoteToken.MATIC) {
-          totalValue = totalValue.times(maticPrice);
+        if (farm.quoteTokenSymbol === QuoteToken.CRO) {
+          totalValue = totalValue.times(bnbPrice);
         }
         else if (farm.quoteTokenSymbol === QuoteToken.CGS) { 
           totalValue =  totalValue.times(cakePrice)
@@ -237,7 +237,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
       return farmsToDisplayWithAPY
     },
     // [glmrPrice, bnbPriceToBusd, query, cakePrice]
-    [maticPrice, query, cakePrice]
+    [bnbPrice, query, cakePrice]
   )
 
   const farmsStakedMemoized = useMemo(() => {
@@ -351,7 +351,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
                   {farmsStakedMemoized.map((farm) => (
                     <RowFarmCard key={farm.pid} 
                       farm={farm} 
-                      bnbPrice={maticPrice} 
+                      bnbPrice={bnbPrice} 
                       cakePrice={cakePrice} 
                       account={account} removed={false} />                     
                   ))}
@@ -360,7 +360,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
                 farmsStakedMemoized.map((farm) => (
                   <FarmCard key={farm.pid} 
                     farm={farm} 
-                    bnbPrice={maticPrice} 
+                    bnbPrice={bnbPrice} 
                     cakePrice={cakePrice} 
                     account={account} removed={false} />                     
                 ))
@@ -372,7 +372,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
                 {farmsStakedMemoized.map((farm) => (
                     <RowFarmCard key={farm.pid} 
                       farm={farm} 
-                      bnbPrice={maticPrice} 
+                      bnbPrice={bnbPrice} 
                       cakePrice={cakePrice} 
                       account={account} removed />                     
                   ))}
@@ -381,7 +381,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
               farmsStakedMemoized.map((farm) => (
                 <FarmCard key={farm.pid} 
                   farm={farm} 
-                  bnbPrice={maticPrice} 
+                  bnbPrice={bnbPrice} 
                   cakePrice={cakePrice} 
                   account={account} removed />                     
               ))

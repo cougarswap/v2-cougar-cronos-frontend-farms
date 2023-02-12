@@ -186,7 +186,7 @@ const CardFooter: React.FC<Props> = ({
             </Row>
           )}          
           <ContractLink color="#12aab5" href={ftmScan} style={{ alignSelf: 'center' }}>
-            <Label>{TranslateString(999, 'View contract on Polygonscan')}:</Label>
+            <Label>{TranslateString(999, 'View contract on Cronoscan')}:</Label>
           </ContractLink>              
           <TokenLink href={projectLink} target="_blank">
             {TranslateString(412, 'View project site')}

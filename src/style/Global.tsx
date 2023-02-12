@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     background-color: #25262d;
     background-blend-mode: overlay;
-    background-image: url(/images/egg/cougar_bg.jpg);
+    background-image: url(/images/egg/cougar_bg_cronos_1.jpg);
     background-attachment: fixed;
     background-size: cover;
     

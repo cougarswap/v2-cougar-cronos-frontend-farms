@@ -268,9 +268,9 @@ const RowFarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPri
 
   const bscScanAddress=
     farm.isTokenOnly ?
-      `https://polygonscan.com/address/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
+      `https://cronoscan.com/address/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
       :
-      `https://polygonscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`     
+      `https://cronoscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`     
 
   const isMetaMaskInScope = !!window.ethereum?.isMetaMask
 
@@ -375,7 +375,7 @@ const RowFarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPri
                  </Flex>
                  <Flex justifyContent="flex-start">
                    <Link color="textTitleFarm" external href={bscScanAddress} bold={false}>
-                     {TranslateString(356, 'View on Polygonscan')}
+                     {TranslateString(356, 'View on Cronoscan')}
                    </Link>
                  </Flex>
                  {account && isMetaMaskInScope && farm.isTokenOnly && (

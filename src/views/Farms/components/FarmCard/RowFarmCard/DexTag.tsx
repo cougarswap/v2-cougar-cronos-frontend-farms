@@ -23,7 +23,7 @@ const Tada = keyframes`
 `
 
 const Container = styled.div<{color?: string, borderRadius?: string}>`
-    border: ${({color}) => color ? `1px solid ${color}` : '1px solid #89ff00'};
+    border: ${({color}) => color ? `2px solid ${color}` : '2px solid #89ff00'};
     border-radius: ${({borderRadius}) => borderRadius ? `${borderRadius}` : '1px'};
     padding: 3px;
     text-align: center;
@@ -46,32 +46,27 @@ export interface DexTagProps {
 }
 
 const DexTag : React.FC<DexTagProps> = ({dex, borderRadius}) => {
-  let text = 'QUICKSWAP'
-  let color = '#bb85ed'
+  let text = 'VVS FINANCE'
+  let color = '#1c6d00'
   switch(dex) { 
-    case DexSwapRouter.BEAM: { 
-      text = 'BEAM'
-      color = '#0eb9fa'
-       break; 
-    }     
-    case DexSwapRouter.ZEN: { 
-      text = 'ZENLINK'
+    case DexSwapRouter.CRONASWAP: { 
+      text = 'CRONA SWAP'
       color = '#4a148c'
        break; 
     } 
-    case DexSwapRouter.TRADE: { 
-      text = 'MYTRADE'
-      color = '#aa00ff'
+    case DexSwapRouter.MEERKATFINANCE: { 
+      text = 'MM FINANCE'
+      color = '#c56000'
        break; 
     } 
-    case DexSwapRouter.SOLARFLARE: { 
-      text = 'SolarFlare'
-      color = '#ec407a'
+    case DexSwapRouter.COUGAREXCHANGE: { 
+      text = 'CGX FINANCE'
+      color = '#8a63e7'
        break; 
     } 
     default: { 
-      text = 'QUICKSWAP'
-      color = '#bb85ed'
+      text = 'VVS FINANCE'
+      color = '#1c6d00'
        break; 
     }
   } 

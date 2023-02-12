@@ -29,7 +29,7 @@ const CountDownToLauchTime: React.FC<CountDownToLauchTimeProps> = ({block, timeS
         <Block>
             <Text as="p" fontSize="24px">
                 <strong>{TranslateString(730, 'Farming will start on Block')}&nbsp;
-                <CountDownBlockLink href={`https://polygonscan.com/block/countdown/${block}`}>#{block}</CountDownBlockLink>
+                <CountDownBlockLink href={`https://cronoscan.com/block/countdown/${block}`}>#{block}</CountDownBlockLink>
                 </strong>
             </Text>
             <Text as="p" fontSize="20px">

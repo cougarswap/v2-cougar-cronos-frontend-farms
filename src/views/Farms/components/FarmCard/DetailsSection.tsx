@@ -91,7 +91,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       )}     
       <Flex justifyContent="flex-start">
         <Link external href={bscScanAddress} bold={false}>
-          {TranslateString(356, 'View on Polygon')}
+          {TranslateString(356, 'View on Cronos')}
         </Link>
       </Flex>         
     </Wrapper>

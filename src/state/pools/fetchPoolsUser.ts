@@ -10,8 +10,8 @@ import { getMasterchefContract } from 'utils/contractHelpers'
 
 // Pool 0, Cake / Cake is a different kind of contract (master chef)
 // BNB pools use the native BNB token (wrapping ? unwrapping is done at the contract level)
-const nonBnbPools = poolsConfig.filter((p) => p.stakingTokenName !== QuoteToken.MATIC)
-const bnbPools = poolsConfig.filter((p) => p.stakingTokenName === QuoteToken.MATIC)
+const nonBnbPools = poolsConfig.filter((p) => p.stakingTokenName !== QuoteToken.CRO)
+const bnbPools = poolsConfig.filter((p) => p.stakingTokenName === QuoteToken.CRO)
 const nonMasterPools = poolsConfig.filter((p) => p.sousId !== 0)
 const web3 = getWeb3()
 

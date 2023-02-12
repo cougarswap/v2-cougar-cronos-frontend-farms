@@ -163,10 +163,10 @@ const PartnerPools = () => {
 
     const priceToBnb = useCallback((tokenName: string, tokenPrice: BigNumber, quoteToken: QuoteToken): BigNumber => {
       const tokenPriceBN = new BigNumber(tokenPrice)
-      if (tokenName === 'WMATIC') {
+      if (tokenName === 'WCRO') {
         return new BigNumber(1)
       }
-      if (tokenPrice && quoteToken === QuoteToken.MATIC) {
+      if (tokenPrice && quoteToken === QuoteToken.CRO) {
         return tokenPriceBN.div(wftmPrice)
       }
       if (tokenPrice && quoteToken === QuoteToken.CGS) {
@@ -200,7 +200,7 @@ const PartnerPools = () => {
                 prices[partnerPool.earningToken.symbol] = new BigNumber(farmPool.tokenPriceVsQuote)
             }
             else
-            if (farmPool.quoteTokenSymbol === QuoteToken.MATIC) {
+            if (farmPool.quoteTokenSymbol === QuoteToken.CRO) {
                 prices[partnerPool.earningToken.symbol] = new BigNumber(farmPool.tokenPriceVsQuote).multipliedBy(wftmPrice)
             }
             else if (farmPool.quoteTokenSymbol === QuoteToken.CGS) {
@@ -291,7 +291,7 @@ const PartnerPools = () => {
         const poolsWithApy : PoolWithApy[] = pools.map((pool)  => {
           const isBnbPool = pool.poolCategory === PoolCategory.BINANCE
           const rewardTokenFarm = farmsData.find((f) => f.tokenSymbol === pool.tokenName)
-          const stakingTokenFarm = farmsData.find((s) => s.tokenSymbol === pool.stakingTokenName && s.quoteTokenSymbol === QuoteToken.MATIC)
+          const stakingTokenFarm = farmsData.find((s) => s.tokenSymbol === pool.stakingTokenName && s.quoteTokenSymbol === QuoteToken.CRO)
       
           // /!\ Assume that the farm quote price is BNB
           const stakingTokenPriceInBNB = isBnbPool ? new BigNumber(1) : new BigNumber(stakingTokenFarm?.tokenPriceVsQuote)

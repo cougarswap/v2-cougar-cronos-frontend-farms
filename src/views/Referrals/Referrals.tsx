@@ -19,7 +19,7 @@ const ReferralInfo = styled(Card)`
 `
 
 const ReferralHeader  = styled.div`
-background: linear-gradient(90deg, #6e57cd 0%, #01213e 100%, #01213e 100%);
+background: linear-gradient(90deg, #FFAD02 0%, #FF6C02 100%, #FF6C02 100%);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 opacity: 0.85;
     padding: 24px;

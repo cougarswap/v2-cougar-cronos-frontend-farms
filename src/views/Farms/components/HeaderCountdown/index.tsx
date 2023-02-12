@@ -38,7 +38,7 @@ const HeeaderCountdownCard = styled(Flex)`
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(166deg, #143c78 20%, #464f99 80%);
+  background: linear-gradient(166deg, #FFAD02 20%, #FF6C02 80%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   opacity: 0.85;
   border-radius: 33px;
@@ -55,7 +55,7 @@ const fadein = keyframes`
 
 const FarmingCountdownTimeHeader = styled(Heading)<{color?: string}>`    
     text-transform: uppercase;
-    color: ${({ theme }) => theme.colors.primaryBright};
+    color: #ffffff;
     text-align: center;
     margin: 5px auto 10px;
     font-size: 1.4em;
