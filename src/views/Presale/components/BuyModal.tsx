@@ -9,7 +9,6 @@ import { BIG_ZERO } from 'utils/bigNumber'
 import { getUsdcAddress } from 'utils/addressHelpers'
 import ModalActions from 'components/ModalActions'
 import ModalInput from 'components/ModalInput'
-import { BASE_STELLA_SWAP_URL } from 'config'
 
 interface BuyModalProps {
     max: BigNumber
@@ -80,7 +79,7 @@ const BuyModal: React.FC<BuyModalProps> = ({ max, usdcPerCake, tokensUnclaimed, 
         setVal(fullBalance)
     }, [fullBalance, setVal])
 
-    const usdcLiquidityUrl = `${BASE_STELLA_SWAP_URL}/swap?outputCurrency=${getUsdcAddress()}`
+    const usdcLiquidityUrl = `https://cronosdex.cougarswap.io/#/swap?outputCurrency=${getUsdcAddress()}`
 
     return (
         <Modal title={`${t(999, 'Buy CGS Token')}`} onDismiss={onDismiss}>            

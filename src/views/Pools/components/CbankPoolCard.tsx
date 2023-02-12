@@ -98,9 +98,9 @@ const CbankPoolCard: React.FC<HarvestProps> = ({ pool }) => {
       decimals: tokenDecimals
   }
 
-  const quoteTokenAdresses : Address = {137: farmToken.wmatic }
-  const quoteTokenSymbol = 'MATIC' 
-  const tokenAddresses: Address = { 137:  stakingToken.token.address }
+  const quoteTokenAdresses : Address = {25: farmToken.wcro }
+  const quoteTokenSymbol = 'WCRO' 
+  const tokenAddresses: Address = { 25:  stakingToken.token.address }
   const farmAPY = apy && apy.toNumber().toLocaleString('en-US', { maximumFractionDigits: 2 })
 
   const totalValueFormated = useMemo(() => {
@@ -170,8 +170,8 @@ const CbankPoolCard: React.FC<HarvestProps> = ({ pool }) => {
       <ExpandingWrapper expanded={showExpandableSection}>
         <DetailsSection
           isTokenOnly
-          bscScanAddress={`https://polygonscan.com/address/${tokenAddress}`}
-          masterChefBscScanAddress={`https://polygonscan.com/address/${contractAddress}`}
+          bscScanAddress={`https://cronoscan.com/address/${tokenAddress}`}
+          masterChefBscScanAddress={`https://cronoscan.com/address/${contractAddress}`}
           projectLink={projectLink}
           earningToken={earningToken}
           totalValueFormated={totalValueFormated}

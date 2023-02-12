@@ -27,7 +27,7 @@ const RegisterPresaleWhiteListCard = styled(PresaleStyledCard)`
 	border-radius: 5px;
 	overflow: hidden;	
 
-    background: linear-gradient(166deg,#143c78 20%,#464f99 80%);
+    background: linear-gradient(90deg, #FFAD02 0%, #FF6C02 100%, #FF6C02 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     opacity: 0.85;
     border-radius: 33px;
@@ -142,7 +142,7 @@ const GoToPresaleNavigation = () => {
                 <Button variant="primarycronos">{isHardCapMet ||  (!isHardCapMet && !isSaleActive ) ? 'GO TO PRESALE' : 'PRESALE BUY'}</Button>
             </Link>
             <Flex mt="10px" justifyContent="center">
-                <LinkExternal color="#ffffff" fontSize="10px" href="https://cougarecosystem.gitbook.io/polycougarswap/presale-information">
+                <LinkExternal color="#ffffff" fontSize="10px" href="https://cougarecosystem.gitbook.io/cronoscougarswap/presale-information">
                     Why Presale?
                 </LinkExternal>
             </Flex>

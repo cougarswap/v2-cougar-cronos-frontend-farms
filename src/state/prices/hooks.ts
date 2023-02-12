@@ -7,7 +7,7 @@ export const usePrices = () => {
 
     nativePrices = [
         { symbol: 'CGS', address: getCakeAddress(), price: useSelector((state: State) => state.prices.tokenPrice)},
-        { symbol: 'WMATIC', address: getWbnbAddress(), price: useSelector((state: State) => state.prices.platformPrice)},
+        { symbol: 'WCRO', address: getWbnbAddress(), price: useSelector((state: State) => state.prices.platformPrice)},
         ...nativePrices,
     ]
 

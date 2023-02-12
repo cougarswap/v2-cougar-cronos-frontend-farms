@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { PriceState } from "state/types";
-import { fetchPlatformUsdPrice, fetchTokenUsdPrice, fetchCgsMaticPrice } from "./fetchPrice";
+import { fetchPlatformUsdPrice, fetchTokenUsdPrice, fetchCgsCroPrice } from "./fetchPrice";
 
 const initialState: PriceState = {
     isLoading: false,
@@ -13,7 +13,7 @@ const initialState: PriceState = {
 // Thunks
 export const fetchPlatformPriceAsync = createAsyncThunk<any>('prices/fetchPlatformPrice', async () => {
   const _platPrice = await fetchPlatformUsdPrice();
-  const wftmPrice = _platPrice.find(p => p.symbol === 'WMATIC').price
+  const wftmPrice = _platPrice.find(p => p.symbol === 'WCRO').price
   
   return wftmPrice
 })
@@ -28,10 +28,10 @@ export const fetchTokenPriceAsync = createAsyncThunk<any>('prices/fetchTokenPric
 
 export const fetchOtherTokensPricesAsync = createAsyncThunk<any>('prices/fetchOtherTokensPrices', async () => {
   const _platPrice = await fetchPlatformUsdPrice();
-  const wftmPrice = _platPrice.find(p => p.symbol === 'WMATIC').price
+  const wftmPrice = _platPrice.find(p => p.symbol === 'WCRO').price
 
   const promises = [
-    await fetchCgsMaticPrice(wftmPrice)  
+    await fetchCgsCroPrice(wftmPrice)  
   ]
 
   const dataPrices = await Promise.all(promises)

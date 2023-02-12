@@ -122,11 +122,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, account }) => {
 
   const farmAPY = farm.apy && farm.apy.toNumber().toLocaleString('en-US', { maximumFractionDigits: 2 })
 
-  const quoteTokenAdresses : Address = {137: farm.stakingToken.isTokenOnly ? farmToken.wmatic : farm.stakingToken.token0.address }
-  const quoteTokenSymbol = farm.stakingToken.isTokenOnly ? 'MATIC' : farm.stakingToken.token0.symbol
-  const tokenAddresses: Address = {137:  farm.stakingToken.isTokenOnly ? farm.stakingToken.token.address : farm.stakingToken.token1.address }
+  const quoteTokenAdresses : Address = {25: farm.stakingToken.isTokenOnly ? farmToken.wcro : farm.stakingToken.token0.address }
+  const quoteTokenSymbol = farm.stakingToken.isTokenOnly ? 'WCRO' : farm.stakingToken.token0.symbol
+  const tokenAddresses: Address = {25:  farm.stakingToken.isTokenOnly ? farm.stakingToken.token.address : farm.stakingToken.token1.address }
 
   const transferTaxRate = useTransferTaxRate()
+
 
   return (
     <FCard>    
@@ -204,8 +205,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, account }) => {
         <DetailsSection
           removed={removed}
           isTokenOnly={farm.stakingToken.isTokenOnly}
-          bscScanAddress={`https://polygonscan.com/address/${farm.stakingToken.token.address}`}
-          masterChefBscScanAddress={`https://polygonscan.com/address/${farm.masterchefAddress}`}
+          bscScanAddress={`https://cronoscan.com/address/${farm.stakingToken.token.address}`}
+          masterChefBscScanAddress={`https://cronoscan.com/address/${farm.masterchefAddress}`}
           projectLink={farm.projectLink}
           earningToken={farm.earningToken}
           totalValueFormated={totalValueFormated}

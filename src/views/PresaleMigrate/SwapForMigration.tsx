@@ -168,8 +168,8 @@ export default function SwapForMigration() {
                 </Flex>
                 <BalanceInput
                     aria-disabled
-                    // value={value}
-                    value={Number(value) *10000/BuyTokenPerCGS} // for poly
+                    value={value}
+                    // value={Number(value) *10000/BuyTokenPerCGS} // for poly
                     onUserInput={setValue}
                     decimals={18}                    
                     mb="8px"

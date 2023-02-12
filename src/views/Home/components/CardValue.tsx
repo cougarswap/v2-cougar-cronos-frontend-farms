@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useCountUp } from 'react-countup'
 import { Text } from '@pancakeswap-libs/uikit'
-import styled from 'styled-components'
 
 interface CardValueProps {
   value: number
@@ -11,12 +10,6 @@ interface CardValueProps {
   prefix?: string
   postfix?: string
 }
-
-const StyledText = styled(Text)`
-  background: linear-gradient(318deg,#b15252 0,#1000ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`
 
 const CardValue: React.FC<CardValueProps> = ({ value, decimals, fontSize = '40px', color = "primaryDark", prefix, postfix }) => {
   const { countUp, update } = useCountUp({
@@ -36,9 +29,9 @@ const CardValue: React.FC<CardValueProps> = ({ value, decimals, fontSize = '40px
   }, [value, updateValue])
 
   return (
-    <StyledText color={color} bold fontSize={fontSize}>
+    <Text color={color} bold fontSize={fontSize}>
       {prefix}{countUp}{postfix}
-    </StyledText>
+    </Text>
   )
 }
 

@@ -47,7 +47,7 @@ const RowLinkPartner : React.FC<RowLinkPartnerProps> = ({linkPartnerPool, accoun
     const shouldRenderChild = useDelayedUnmount(showExpandableSection, 300)
     
     const liquidityUrl = getLiquidityUrl(dex, tokenPath, isTokenOnly)
-    const masterChefBscScanAddress =`https://polygonscan.com/address/${linkPartnerPool.contractAddress}`  
+    const masterChefBscScanAddress =`https://cronoscan.com/address/${linkPartnerPool.contractAddress}`  
     const lpLabel = token.symbol
 
     const TranslateString = useI18n()
@@ -179,7 +179,7 @@ const WrapperDesktop = styled.tr`
   position: relative;
   font-size: 0.8em;  
   margin: 0;  
-  border-bottom: 1px solid #473e6c;  
+  border-bottom: 1px solid #5f7e61;  
   &>td {
     padding: 20px 20px 20px 0;
   }
@@ -206,7 +206,7 @@ const ExpandedRow = styled.tr<{ expanded: boolean }>`
     padding: 10px;
   }
 
-  border-bottom: 1px solid #473e6c;  
+  border-bottom: 1px solid #5f7e61;  
   display: ${(props) => (props.expanded) ? 'table-row' : 'none'};
   ${({ theme }) => theme.mediaQueries.nav} {
       display: none;
@@ -218,7 +218,7 @@ const WrapperMobile = styled.tr`
   position: relative;
   font-size: 0.8em;  
   margin: 0;  
-  border-bottom: 1px solid #473e6c;  
+  border-bottom: 1px solid #5f7e61;  
   &>td {
     padding: 20px 20px 20px 0;
   }

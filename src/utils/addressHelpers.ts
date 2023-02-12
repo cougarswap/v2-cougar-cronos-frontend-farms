@@ -44,7 +44,7 @@ export const getMulticallAddress = () => {
   return addresses.mulltiCall[chainId]
 }
 export const getWbnbAddress = () => {
-  return addresses.wmatic[chainId]
+  return addresses.wcro[chainId]
 }
 export const getLotteryAddress = () => {
   return addresses.lottery[chainId]

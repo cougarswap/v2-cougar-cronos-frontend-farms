@@ -48,19 +48,16 @@ export enum QuoteToken {
 }
 
 export enum DexSwapRouter {
-  'STELLA' = 'STELLA',
-  'BEAM' = 'BEAM',  
-  'Convergence' = 'Convergence',  
-  'TRADE' = 'Mytrade',  
-  'ZEN' = 'Zenlink',   
-  'SOLARFLARE' = 'SOLARFLARE',   
+  'VVSFINANCE' = 'VVSFINANCE',
+  'MEERKATFINANCE' = 'MEERKATFINANCE',
+  'CRONASWAP' = 'CRONASWAP',
+  'COUGAREXCHANGE' = 'COUGAREXCHANGE'
 }
 
 export enum DexSwapPatch {
-  'STELLA' = '',
-  'BEAM' = 'beam',
-  'CONV' = 'conv',
-  'SOLARFLARE' = 'flare',
+  'VVSFINANCE' = 'vvs',
+  'MEERKATFINANCE' = 'mmf',
+  'CRONASWAP' = 'crona',
 }
 
 export enum PoolCategory {

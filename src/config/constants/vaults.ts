@@ -13,7 +13,7 @@ export const autoVaultConfig : VaultConfig = {
     stakePlatform: StakePlatform.COUGARSWAP,
     strategyContract: '0x3e01FBA78A593236c2505C88d79108B56c8Bb2a1',
     status: VaultStatus.ACTIVE,
-    dex: DexSwapRouter.STELLA,
+    dex: DexSwapRouter.COUGAREXCHANGE,
     depositFee: 0,
     withdrawFee: 0,
     performanceFee: 0,

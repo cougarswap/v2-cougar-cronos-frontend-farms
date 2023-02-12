@@ -16,7 +16,7 @@ import CardValue from './CardValue'
 const StyledCakeStats = styled(Card)`  
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(166deg,#143c78 20%,#464f99 80%);
+  background: linear-gradient(90deg, #FFAD02 0%, #FF6C02 100%, #FF6C02 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   opacity: 0.85;
   border-radius: 33px;
@@ -25,7 +25,7 @@ const ActionsHeading = styled.div`
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 24px;
-`
+` 
 
 const StyledCakeStatsBody = styled(Card)`
 background-color: #FFFFFF;
@@ -46,12 +46,6 @@ const Row = styled.div`
   font-size: 14px;
   justify-content: space-between;
   margin-bottom: 8px;
-`
-
-const StyledText = styled(Text)`    
-   background: linear-gradient(318deg,#b15252 0,#1000ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 `
 
 const CakeStats = () => {
@@ -80,28 +74,28 @@ const CakeStats = () => {
       <StyledCakeStatsBody>
       <CardBody>
         <Row>
-          <Text color = "#000000" bold fontSize="14px">{TranslateString(999, 'Market Cap')}</Text>
+          <Text color = "#000000" fontSize="14px">{TranslateString(999, 'Market Cap')}</Text>
           <CardValue color = "primaryDark" fontSize="14px" value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
         </Row>
         <Row>
-          <Text color = "#000000" bold fontSize="14px">{TranslateString(536, 'Total Supply')}</Text>
+          <Text color = "#000000" fontSize="14px">{TranslateString(536, 'Total Supply')}</Text>
           {totalSupply && <CardValue color = "primaryDark" fontSize="14px" value={getBalanceNumber(totalSupply)} decimals={0} />}
         </Row>       
         <Row>
-          <Text color = "#000000" bold fontSize="14px">{TranslateString(538, 'Total Burned')}</Text>
+          <Text color = "#000000" fontSize="14px">{TranslateString(538, 'Total Burned')}</Text>
           <CardValue color = "primaryDark" fontSize="14px" value={getBalanceNumber(burnedBalance)} decimals={0} />
         </Row>
         <Row>
-          <Text color = "#000000" bold fontSize="14px">{TranslateString(541, 'Max Tx Amount')}</Text>          
+          <Text color = "#000000" fontSize="14px">{TranslateString(541, 'Max Tx Amount')}</Text>          
           {maxTransferAmount && <CardValue color = "primaryDark" fontSize="14px" value={maxTransferAmount.toNumber()} decimals={0} />}
         </Row>
         <Row>
-          <Text color = "#000000" bold fontSize="14px">{TranslateString(543, 'Transfer Tax')}</Text>          
-          {transferTaxRate && <CardValue color = "primaryDark" postfix="%" fontSize="14px" value={transferTaxRate} decimals={0} />}
+          <Text color = "#000000" fontSize="14px">{TranslateString(543, 'Transfer Tax')}</Text>          
+          {transferTaxRate && <CardValue color = "#000000" postfix="%" fontSize="14px" value={transferTaxRate} decimals={0} />}
         </Row>
         <Row>
-          <Text color = "#000000" bold fontSize="14px">{TranslateString(540, 'New CGS/block')}</Text>
-          <StyledText color = "primaryDark"  bold fontSize="14px">{tokenPerBlock}</StyledText>
+          <Text color = "#000000" fontSize="14px">{TranslateString(540, 'New CGS/block')}</Text>
+          <Text color = "#000000"  bold fontSize="14px">{tokenPerBlock}</Text>
         </Row>              
       </CardBody>
       </StyledCakeStatsBody>

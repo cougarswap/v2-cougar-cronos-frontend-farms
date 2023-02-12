@@ -15,14 +15,14 @@ export const setupNetwork = async () => {
         params: [
           {
             chainId: `0x${chainId.toString(16)}`,
-            chainName: 'Polygon',
+            chainName: 'Cronos Mainnet',
             nativeCurrency: {
-              name: 'MATIC',
-              symbol: 'MATIC',
+              name: 'CRO',
+              symbol: 'CRO',
               decimals: 18,
-            },
-            rpcUrls: ['https://polygon-rpc.com/'],
-            blockExplorerUrls: ['https://polygonscan.com/'],
+            },            
+            rpcUrls: ['https://mainnet.cronoslabs.com/v1/55e37d8975113ae7a44603ef8ce460aa'],            
+            blockExplorerUrls: ['https://cronoscan.com/address/'],
           },
         ],
       })
@@ -54,7 +54,7 @@ export const registerToken = async (tokenAddress: string, tokenSymbol: string, t
         address: tokenAddress,
         symbol: tokenSymbol,
         decimals: tokenDecimals,
-        image: isPair ? '' : `https://polygon.cougarswap.io/images/single-token/${tokenSymbol}.png`,
+        image: isPair ? '' : `https://cronosapp.cougarswap.io/images/single-token/${tokenSymbol}.png`,
       },
     },
   })

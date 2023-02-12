@@ -30,7 +30,7 @@ const ExpandedRow = styled.tr<{ expanded: boolean }>`
     padding: 10px;
   }
 
-  border-bottom: 1px solid #473e6c;  
+  border-bottom: 1px solid #5f7e61;  
   display: ${(props) => (props.expanded) ? 'table-row' : 'none'};
 `
 
@@ -474,7 +474,7 @@ const RowVaultPool : React.FC<RowVaultPoolProps> = ({
                                   </Flex>
                                   <Flex>
                                     <StyledLinkExternal color="textTitleFarm" external href={getBscScanLink(vault.stakingToken.token.address, 'address')} bold={false}>
-                                      {TranslateString(999, 'View on Polygonscan')}
+                                      {TranslateString(999, 'View on Cronos Explorer')}
                                     </StyledLinkExternal>
                                   </Flex>
                                   {!vault.isManualCgs && <Flex justifyContent="flex-start">

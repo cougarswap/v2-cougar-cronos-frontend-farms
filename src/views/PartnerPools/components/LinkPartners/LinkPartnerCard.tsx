@@ -103,7 +103,7 @@ const LinkPartnerCard = ({linkPartnerPool, account}) => {
     }, [stakingToken, dex])
       
     const liquidityUrl = getLiquidityUrl(dex, tokenPath, stakingToken.isTokenOnly)
-    const masterChefBscScanAddress =`https://polygonscan.com/address/${contractAddress}`  
+    const masterChefBscScanAddress =`https://cronoscan.com/address/${contractAddress}`  
     const lpLabel = stakingToken.token.symbol
 
     const TranslateString = useI18n()

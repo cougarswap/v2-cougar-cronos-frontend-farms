@@ -11,25 +11,55 @@ export const tokens : TokenList = {
         address: farmTokens.cgs,
         decimals: 18  
     }, 
-    wmatic: {
-        symbol: 'WMATIC',
-        address: farmTokens.wmatic,
+    cgx: {
+        symbol: 'CGX',
+        address: farmTokens.cgx,
+        decimals: 18  
+    }, 
+    cgo: {
+        symbol: 'CGO',
+        address: farmTokens.cgo,
+        decimals: 18  
+    },
+    wcro: {
+        symbol: 'WCRO',
+        address: farmTokens.wcro,
         decimals: 18      
     },
     usdc: {
         symbol: 'USDC',
         address: farmTokens.usdc,
-        decimals: 6
+        decimals: 6 
     }, 
+    mmf: {
+        symbol: 'MMF',
+        address: farmTokens.mmf,
+        decimals: 18
+    },
+    metf: {
+        symbol: 'MMTF',
+        address: farmTokens.metf,
+        decimals: 18
+    },
+    ago: {
+        symbol: 'AGO',
+        address: farmTokens.ago,
+        decimals: 18
+    },
+    betify: {
+        symbol: 'BEFITY',
+        address: farmTokens.betify,
+        decimals: 18
+    }
 }
 
 export const lpTokens : TokenList = {
-    cgsMaticStella: {
-        symbol: 'CGS-WMATIC',
-        address: farmTokens.cgsMatic,
+    cgsWcroVvs: {
+        symbol: 'CGS-WCRO',
+        address: farmTokens.cgsWcro,
         decimals: 18
     },
-    cgsUsdcStella: {
+    cgsUsdcVvs: {
         symbol: 'CGS-USDC',
         address: farmTokens.cgsUsdc,
         decimals: 18

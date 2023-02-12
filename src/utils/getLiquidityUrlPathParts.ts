@@ -5,17 +5,22 @@ import { DexSwapPatch, DexSwapRouter, StakingToken } from "config/constants/type
 import { getDexUrl } from "utils"
 
 // In the URL, using the quote token 'CRO' is represented by 'ETH'
-const getLiquidityUrlPathParts = ({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses, dex = DexSwapRouter.STELLA }) => {
+const getLiquidityUrlPathParts = ({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses, dex = DexSwapRouter.COUGAREXCHANGE }) => {
   const chainId = process.env.REACT_APP_CHAIN_ID
   
   let firstPart = ''
-  if (quoteTokenSymbol === 'MATIC') {
+  if (quoteTokenSymbol === 'CRO') {
+    // firstPart = dex === DexSwapRouter.CRONASWAP ? 'CRO' : 'ETH'
       switch(dex) { 
-        case DexSwapRouter.BEAM: { 
-          firstPart = 'MATIC'
+        case DexSwapRouter.CRONASWAP: { 
+          firstPart = 'CRO'
            break; 
         } 
-        case DexSwapRouter.STELLA: { 
+        case DexSwapRouter.COUGAREXCHANGE: { 
+          firstPart = 'CRO'
+           break; 
+        } 
+        case DexSwapRouter.MEERKATFINANCE: { 
           firstPart = quoteTokenAdresses[chainId]
            break; 
         } 
@@ -32,10 +37,10 @@ const getLiquidityUrlPathParts = ({ quoteTokenAdresses, quoteTokenSymbol, tokenA
   return `${firstPart}/${secondPart}`
 }
 
-export const getLiquidityUrlPathPartsPartnerPool = ({ quoteTokenAdress, quoteTokenSymbol, tokenAddress, dex = DexSwapRouter.STELLA }) => {
+export const getLiquidityUrlPathPartsPartnerPool = ({ quoteTokenAdress, quoteTokenSymbol, tokenAddress, dex = DexSwapRouter.COUGAREXCHANGE }) => {
   let firstPart = ''
-  if (quoteTokenSymbol === 'GLRM') {
-    firstPart = dex === DexSwapRouter.BEAM ? 'GLRM' : 'GLRM'
+  if (quoteTokenSymbol === 'CRO') {
+    firstPart = dex === DexSwapRouter.CRONASWAP ? 'CRO' : 'CRO'
   }
   else {  
     firstPart = quoteTokenAdress
@@ -49,43 +54,41 @@ export const getLiquidityUrlByStakingToken = (stakingToken: StakingToken, dex?: 
   const baseDexUrl = getDexUrl(dex)
 
   if (stakingToken.isTokenOnly) {
-    if (dex === DexSwapRouter.STELLA) {
+    if (dex === DexSwapRouter.VVSFINANCE) {
       return `${baseDexUrl}swap/${stakingToken.token.address}`;
-    }
-    if (dex === DexSwapRouter.Convergence) {
-      return `${baseDexUrl}?swapPair=MATIC_${stakingToken.token.symbol}`;
     }
     return `${baseDexUrl}swap?outputCurrency=${stakingToken.token.address}`;
   }
   
-  if (stakingToken.token0.symbol === 'WMATIC') {
-    const mainToken = dex === DexSwapRouter.STELLA ? 'ETH' : 'ETH'
+  if (stakingToken.token0.symbol === 'WCRO') {
+    const mainToken = dex === DexSwapRouter.VVSFINANCE ? 'ETH' : 'ETH'
     return `${baseDexUrl}add/${mainToken}/${stakingToken.token1.address}`;
   }
   
-  if (stakingToken.token1.symbol === 'WMATIC') {  
-    const mainToken = dex === DexSwapRouter.STELLA ? 'ETH' : 'ETH'
+  if (stakingToken.token1.symbol === 'WCRO') {  
+    const mainToken = dex === DexSwapRouter.VVSFINANCE ? 'ETH' : 'ETH'
     return `${baseDexUrl}add/${mainToken}/${stakingToken.token0.address}`;
   }
+  
   return `${baseDexUrl}add/${stakingToken.token0.address}/${stakingToken.token1.address}`;
 }
 
 
-const getLiquidityPair = (quoteTokenAddress, quoteTokenSymbol, tokenAddress, tokenSymbol, dex = DexSwapRouter.STELLA) => {
+const getLiquidityPair = (quoteTokenAddress, quoteTokenSymbol, tokenAddress, tokenSymbol, dex = DexSwapRouter.CRONASWAP) => {
   const chainId = process.env.REACT_APP_CHAIN_ID
   
-  if (dex === DexSwapRouter.Convergence) {
+  if (dex === DexSwapRouter.VVSFINANCE) {
     return `${tokenSymbol}_${quoteTokenSymbol}`
   }
 
   let firstPart = ''
-  if (quoteTokenSymbol === 'MATIC') {
+  if (quoteTokenSymbol === 'CRO') {
       switch(dex) { 
-        case DexSwapRouter.BEAM: { 
-          firstPart = 'MATIC'
+        case DexSwapRouter.CRONASWAP: { 
+          firstPart = 'CRO'
            break; 
         } 
-        case DexSwapRouter.STELLA: { 
+        case DexSwapRouter.COUGAREXCHANGE: { 
           firstPart = quoteTokenAddress
            break; 
         } 
@@ -114,15 +117,6 @@ export function getLiquidityLink(dex: DexSwapRouter,
   ): string {
     const baseDexUrl = getDexUrl(dex);
   if (isTokenOnly) {
-    if (dex === DexSwapRouter.BEAM) {
-      return `${baseDexUrl}beam/swap?outputCurrency=${tokenAddress}`;
-    }
-    if (dex === DexSwapRouter.Convergence) {
-      return `${baseDexUrl}conv/swap?outputCurrency=${tokenAddress}`;
-    }
-    if (dex === DexSwapRouter.SOLARFLARE) {
-      return `https://solarflare.io/exchange/stable-pool/add/${quoteTokenSymbol}`;
-    }
     return `${baseDexUrl}swap?outputCurrency=${tokenAddress}`;
   }
 
@@ -131,22 +125,6 @@ export function getLiquidityLink(dex: DexSwapRouter,
     tokenAddress,
     tokenSymbol, 
     dex)
-
-  if (dex === DexSwapRouter.BEAM) {
-    return `${baseDexUrl}add/${DexSwapPatch.BEAM}/${liquidityPairPath}`;
-  }
-  if (dex === DexSwapRouter.Convergence) {
-    return `${baseDexUrl}add/${DexSwapPatch.CONV}/${liquidityPairPath}`;
-  }
-  if (dex === DexSwapRouter.ZEN) {
-    return `https://dex.zenlink.pro/#/pool?liquidType=SHOW_ADD`;
-  }
-  if (dex === DexSwapRouter.TRADE) {
-    return `https://mytrade.org/add/${liquidityPairPath}`;
-  }
-  if (dex === DexSwapRouter.SOLARFLARE) {
-    return `${baseDexUrl}add/${DexSwapPatch.SOLARFLARE}/${liquidityPairPath}`
-  }
   return `${baseDexUrl}add/${liquidityPairPath}`;
 }
 

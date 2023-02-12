@@ -94,7 +94,7 @@ const Signal = styled.div<{goodSignal: boolean}>`
 const CurrentBlockNumber = () => {
     const { currentBlock } = useBlock(); 
 
-    const ftmScanUrl = `https://polygonscan.com/block/${currentBlock}`
+    const ftmScanUrl = `https://cronoscan.com/block/countdown/${currentBlock}`
     return (
         <LinkWrapper target="_blank" rel="noopener noreferrer" href={ftmScanUrl}>
             <Container>

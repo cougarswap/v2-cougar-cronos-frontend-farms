@@ -62,7 +62,7 @@ const ExpandedRow = styled.tr<{ expanded: boolean }>`
     padding: 10px;
   }
 
-  border-bottom: 1px solid #473e6c;  
+  border-bottom: 1px solid #5f7e61;  
   display: ${(props) => (props.expanded) ? 'table-row' : 'none'};
 `
 
@@ -109,7 +109,7 @@ const AddToMetaMaskButton = styled.button`
   align-items: center;
   cursor: pointer;
   padding-left: 0;
-  color: ${({theme}) => theme.colors.textTitleFarm};
+  color: ${({theme}) => theme.colors.text};
   & > * {
     color: ${({theme}) => theme.colors.textTitleFarm};
   }
@@ -124,7 +124,7 @@ interface FarmCardProps {
   isInactivePartnerPool?: boolean
 }
 
-const RowFarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, account, isInactivePartnerPool }) => {
+const RowFarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, account, isInactivePartnerPool}) => {
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
@@ -143,9 +143,9 @@ const RowFarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPri
   const rewardPerDay = farm.tokenRewardPerDay && farm.tokenRewardPerDay.toNumber().toLocaleString('en-US', { maximumFractionDigits: 2 })
     
   const { dex, stakingToken } = farm  
-  const quoteTokenAdresses : Address = {137: farm.stakingToken.isTokenOnly ? farmToken.wmatic : farm.stakingToken.token0.address }
-  const quoteTokenSymbol = farm.stakingToken.isTokenOnly ? 'MATIC' : farm.stakingToken.token0.symbol
-  const tokenAddresses: Address = {137:  farm.stakingToken.isTokenOnly ? farm.stakingToken.token.address : farm.stakingToken.token1.address }
+  const quoteTokenAdresses : Address = {25: farm.stakingToken.isTokenOnly ? farmToken.wcro : farm.stakingToken.token0.address }
+  const quoteTokenSymbol = farm.stakingToken.isTokenOnly ? 'WCRO' : farm.stakingToken.token0.symbol
+  const tokenAddresses: Address = {25:  farm.stakingToken.isTokenOnly ? farm.stakingToken.token.address : farm.stakingToken.token1.address }
 
   const tokenPath = useMemo(() => {
     if (stakingToken.isTokenOnly){
@@ -160,7 +160,7 @@ const RowFarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPri
 
   const liquidityUrl = getLiquidityUrl(farm.dex, tokenPath, farm.stakingToken.isTokenOnly)
 
-  const masterChefBscScanAddress =`https://polygonscan.com/address/${farm.masterchefAddress}`  
+  const masterChefBscScanAddress =`https://cronoscan.com/address/${farm.masterchefAddress}`  
 
   const isMetaMaskInScope = !!window.ethereum?.isMetaMask
   const transferTaxRate = useTransferTaxRate()

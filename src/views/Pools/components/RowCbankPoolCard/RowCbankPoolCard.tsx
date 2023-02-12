@@ -69,7 +69,7 @@ const ExpandedRow = styled.tr<{ expanded: boolean }>`
     padding: 10px;
   }
 
-  border-bottom: 1px solid #473e6c;  
+  border-bottom: 1px solid #5f7e61;  
   display: ${(props) => (props.expanded) ? 'table-row' : 'none'};
 `
 
@@ -203,13 +203,13 @@ const RowCbankPoolCard: React.FC<FarmCardProps> = ({ farm, isInactivePartnerPool
         decimals: tokenDecimals
     }
 
-    const quoteTokenAdresses : Address = {137: farmToken.wmatic }
-    const quoteTokenSymbol = 'MATIC' 
-    const tokenAddresses: Address = { 137:  stakingToken.token.address }
+    const quoteTokenAdresses : Address = {25: farmToken.wcro }
+    const quoteTokenSymbol = 'WCRO' 
+    const tokenAddresses: Address = { 25:  stakingToken.token.address }
     
     const tokenPath = stakingToken.token.address
     const liquidityUrl = getLiquidityUrl(farm.dex, tokenPath, stakingToken.isTokenOnly)
-    const masterChefBscScanAddress =`https://polygonscan.com/address/${contractAddress}`  
+    const masterChefBscScanAddress =`https://cronoscan.com/address/${contractAddress}`  
     const isMetaMaskInScope = !!window.ethereum?.isMetaMask
     
     const transferTaxRate = useTransferTaxRate()

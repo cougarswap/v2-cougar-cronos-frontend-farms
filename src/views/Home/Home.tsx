@@ -126,7 +126,7 @@ const Home: React.FC = () => {
     <PageContainer>
       <Hero>
         <TextHeading>
-          {TranslateString(733, 'POLY COUGAR')}
+          {TranslateString(733, 'CRONOS COUGAR')}
         </TextHeading>
         <TextSubHeading>{TranslateString(578, 'A part of the Cougar ecosystem')}</TextSubHeading>                        
       </Hero>            
