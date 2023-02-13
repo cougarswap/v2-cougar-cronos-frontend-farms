@@ -87,7 +87,7 @@ export default function MigrationActions({
             )}
             {isApproved && !value &&
             <Text color='warning'>
-                Enter the number CGS(old) you want to convert
+                Enter the number CGS you want to convert
             </Text>}
             {isApproved && value && Number(value) > 0 && 
             <Text color='warning'>

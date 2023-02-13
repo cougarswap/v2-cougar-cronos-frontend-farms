@@ -6,4 +6,4 @@ aws s3 sync './build' s3://v2-cougar-web-farm-cronos/ --grants read=uri=http://a
 
 aws s3 website s3://v2-cougar-web-farm-cronos/ --index-document index.html --error-document index.html
 
-aws cloudfront create-invalidation --distribution-id E2B9XWCCUK6LWQ --paths "/*"
+aws cloudfront create-invalidation --distribution-id TODO --paths "/*"

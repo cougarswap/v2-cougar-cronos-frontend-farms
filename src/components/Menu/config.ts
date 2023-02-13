@@ -9,8 +9,22 @@ const config: MenuEntry[] = [
   {
     label: 'Legacy (v1)',
     icon: 'JungleIcon',
-    href: 'https://legacy-cronosapp.cougarswap.io/',
+    href: 'https://cronosapp.cougarswap.io/',
     calloutClass: 'highlight' 
+  },
+  {
+    label: 'Products',
+    icon: 'GroupsIcon',
+    items: [
+      {
+        label: 'Cougar Exchange',
+        href: 'https://cgx.finance/',
+      },
+      {
+        label: 'Cougar Optimizer',
+        href: 'https://cgo.finance/',
+      }
+    ]
   },
   {
     label: 'Trade',
@@ -21,12 +35,16 @@ const config: MenuEntry[] = [
         href: 'https://cronosdex.cougarswap.io/#/swap'
       },  
       {
+        label: 'Exchange v2 (New)',
+        href: 'https://cronosdex.cougarswap.io/#/swapv2'
+      },  
+      {
         label: 'Liquidity',
         href: 'https://cronosdex.cougarswap.io/#/pool'
-      },
+      },  
        {
         label: 'Buy CGS',
-        href: 'https://cronosdex.cougarswap.io/#/swap?outputCurrency=0xCBfb4bE9dBbaD51A794B10AaCaC0E5341777d398'
+        href: 'https://cronosdex.cougarswap.io/#/swap?outputCurrency=0x626779bA9809E9a74cea38bdaE641De5A866Dc59'
       },     
     ],
   },
@@ -95,7 +113,7 @@ const config: MenuEntry[] = [
   {
     label: 'Graphs',
     icon: 'ChartIcon',
-    href: 'https://dexscreener.com/cronos/0xCBfb4bE9dBbaD51A794B10AaCaC0E5341777d398'
+    href: 'https://dexscreener.com/cronos/0x626779bA9809E9a74cea38bdaE641De5A866Dc59'
   },
   // {
   //   label: 'Listings',
@@ -107,7 +125,7 @@ const config: MenuEntry[] = [
   //     },     
   //     {
   //       label: 'Cronos Explorer',
-  //       href: 'https://cronoscan.com/address/0xCBfb4bE9dBbaD51A794B10AaCaC0E5341777d398/transactions',
+  //       href: 'https://cronoscan.com/address/0x626779bA9809E9a74cea38bdaE641De5A866Dc59/transactions',
   //     },
   //     {
   //       label: 'Defi Llama',

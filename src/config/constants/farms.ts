@@ -11,7 +11,7 @@ const farms: FarmConfig[] = [
     pid: lpTokens.single.cgs.pid,
     risk: 5,
     isTokenOnly: true,
-    lpSymbol: 'CGS',
+    lpSymbol: 'wCGS',
     lpAddresses: {
       97: '',
       25: tokens.cgsUsdc, // CGS-USDC LP quickswap
@@ -30,7 +30,7 @@ const farms: FarmConfig[] = [
     isNewPool: true,
     pid: lpTokens.pairs.cgsWcro.pid,
     risk: 5,
-    lpSymbol: 'CGS-WCRO',
+    lpSymbol: 'wCGS-WCRO',
     lpAddresses: {
       97: '',
       25: lpTokens.pairs.cgsWcro.address,
@@ -49,7 +49,7 @@ const farms: FarmConfig[] = [
     isNewPool: true,
     pid: lpTokens.pairs.cgsUsdc.pid,
     risk: 5,
-    lpSymbol: 'CGS-USDC',
+    lpSymbol: 'wCGS-USDC',
     lpAddresses: {
       97: '',
       25: lpTokens.pairs.cgsUsdc.address,

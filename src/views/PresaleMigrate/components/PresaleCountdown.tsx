@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Flex, Heading } from '@pancakeswap-libs/uikit';
+import { Card, Flex, Heading } from '@pancakeswap-libs/uikit';
 import moment from 'moment'
 import styled, { keyframes } from 'styled-components';
 import PresaleStyledCard from "components/layout/PresaleCard"
@@ -111,13 +111,13 @@ const PresaleCountdown = () => {
                 }
                 {secondsToPresaleClosing < 0 && !isClaimActive && secondsToClaim > 0 ? 
                     <PresaleStartTimeContainer>
-                    <PresaleStartTimeHeader>Time To Claim Converted CGS(new)</PresaleStartTimeHeader>
+                    <PresaleStartTimeHeader>Time To Claim Converted wCGS</PresaleStartTimeHeader>
                     <CountdownTimer seconds={secondsToClaim} />
                     </PresaleStartTimeContainer>
                     : null
                 }
                 {
-                    isClaimActive ? <PresaleStartTimeHeader>You Can Claim Your Converted CGS(new) Now!</PresaleStartTimeHeader> : null
+                    isClaimActive ? <PresaleStartTimeContainer><PresaleStartTimeHeader>You Can Claim Your Converted wCGS Now!</PresaleStartTimeHeader></PresaleStartTimeContainer> : null
                 }
                 
             </CountDownContainer>

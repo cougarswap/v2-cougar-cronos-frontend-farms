@@ -11,7 +11,7 @@ export const autoVaultConfig : VaultConfig = {
         token: tokens.cgs
     },          
     stakePlatform: StakePlatform.COUGARSWAP,
-    strategyContract: '0x3e01FBA78A593236c2505C88d79108B56c8Bb2a1',
+    strategyContract: '0x26337B589661D933f12493c763926FD742Dda281',
     status: VaultStatus.ACTIVE,
     dex: DexSwapRouter.COUGAREXCHANGE,
     depositFee: 0,

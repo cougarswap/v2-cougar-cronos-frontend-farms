@@ -123,8 +123,8 @@ const Home: React.FC = () => {
         <TextSubHeading>{TranslateString(578, 'A part of the Cougar ecosystem')}</TextSubHeading>                        
       </Hero>            
       {/* <PresaleCard /> */}
-      {/* <FarmingCard /> */}
-      <FarmingAndMigrationCard/>
+      <FarmingCard />
+      {/* <FarmingAndMigrationCard/> */}
       <BannerTop />
       {/* <CbankCard />   */}
       <Flex marginTop="20px">

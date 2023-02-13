@@ -18,7 +18,7 @@ const PresaleCountdownContainer = styled(PresaleStyledCard)`
 const PresaleStartTimeHeader = styled(Heading)`
   font-size: 2em;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.primaryBright};
+  color: ${({ theme }) => theme.colors.primary};
   text-align: center;
   margin: 10px auto;
 `
@@ -112,12 +112,14 @@ const PresaleCountdown = () => {
         ) : null}
         {secondsToPresaleClosing < 0 && !isClaimActive && secondsToClaim > 0 ? (
           <PresaleStartTimeContainer>
-            <PresaleStartTimeHeader>Time To Claim Converted CGS(new)</PresaleStartTimeHeader>
+            <PresaleStartTimeHeader>Time To Claim Converted wCGS</PresaleStartTimeHeader>
             <CountdownTimer seconds={secondsToClaim} />
           </PresaleStartTimeContainer>
         ) : null}
         {isClaimActive ? (
-          <PresaleStartTimeHeader>You Can Claim Your Converted CGS(new) Now!</PresaleStartTimeHeader>
+          <PresaleStartTimeContainer>
+          <PresaleStartTimeHeader>You Can Claim Your Converted wCGS Now!</PresaleStartTimeHeader>
+          </PresaleStartTimeContainer>
         ) : null}
       </CountDownContainer>
   )

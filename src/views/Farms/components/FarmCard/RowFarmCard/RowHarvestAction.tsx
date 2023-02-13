@@ -74,7 +74,7 @@ const RowHarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => 
         </Flex>       
         <HarvestActionBody>             
             <HarvestBalanceWrapper>
-              <Heading color={rawEarningsBalance === 0 ? 'textDisabled' : 'textSubTitleFarm'}>{displayBalance}&nbsp; CGS</Heading>  
+              <Heading color={rawEarningsBalance === 0 ? 'textDisabled' : 'textSubTitleFarm'}>{displayBalance}&nbsp; wCGS</Heading>  
               <Text color="primaryDark" fontSize="0.9em">~${cgsEarned.toLocaleString('en-US', { maximumFractionDigits: 4})}</Text>
             </HarvestBalanceWrapper>                    
             <BalanceAndCompound>                

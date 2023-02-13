@@ -74,7 +74,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(166deg, #FFAD02 20%, #FF6C02 80%);
+  background: linear-gradient(166deg,#6e4d05 20%,#6e4527 80%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 33px;
 
@@ -165,7 +165,7 @@ const FarmingCard = () => {
       {secondsToPresaleClosing < 0 && !isClaimActive && secondsToClaim > 0 ? (
         <Container>
           <PresaleStartTimeContainer>
-            <PresaleStartTimeHeader>Time To Claim Converted CGS(new)</PresaleStartTimeHeader>
+            <PresaleStartTimeHeader>Time To Claim Converted wCGS</PresaleStartTimeHeader>
             <CountdownTimer seconds={secondsToClaim} />
           </PresaleStartTimeContainer>
         </Container>
@@ -173,7 +173,7 @@ const FarmingCard = () => {
       {isClaimActive ? (
         <Container>
            <PresaleStartTimeContainer>
-          <PresaleStartTimeHeader>You Can Claim Your Converted CGS(new) Now!</PresaleStartTimeHeader>
+          <PresaleStartTimeHeader>You Can Claim Your Converted wCGS Now!</PresaleStartTimeHeader>
         </PresaleStartTimeContainer>
         </Container>
       ) : null}

@@ -15,7 +15,7 @@ const PresaleHeading = styled(Heading)`
     font-size: 2.5em;
     font-weight: 700;  
     font-size: 72px;
-    background: -webkit-linear-gradient(#cb51ff, #8fbcff);
+    background: -webkit-linear-gradient(#FFAD02,#FF6C02);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1;
@@ -98,9 +98,9 @@ export default function Migration() {
                 <DecorationHeading>{t('Convert old CGS to new CGS')}</DecorationHeading>                 
             </TextHeader>                                                 
         </PresalePageHeader>
-        <HeaderCoundown>
+        {/* <HeaderCoundown>
         <PresaleCountdown />
-        </HeaderCoundown>
+        </HeaderCoundown> */}
         {/* <PresaleCard/> */}
         <SwapForMigration />
     </Container>

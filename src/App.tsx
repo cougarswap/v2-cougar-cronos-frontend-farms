@@ -44,7 +44,7 @@ const App: React.FC = () => {
   usePollBlockNumber()
   useEagerConnect()
   useFetchPublicData()
-  // useFetchCakeVault()
+  useFetchCakeVault()
   usePresaleDataOption(PresaleOption.OPTION_1, account)
 
   return (

@@ -90,7 +90,7 @@ export default function SwapForMigration() {
     toastSuccess(
       t('Success!'),
       <ToastDescriptionWithTx txHash={txHash}>
-        {t('You have converted %amount% CGS(old) to CGS(new)!', {
+        {t('You have converted %amount% CGS to wCGS!', {
           amount: getBalanceNumber(amount),
         })}
       </ToastDescriptionWithTx>,
@@ -101,7 +101,7 @@ export default function SwapForMigration() {
     toastSuccess(
       t('Got approval!'),
       <ToastDescriptionWithTx txHash={txHash}>
-        {t('You have successfully approved the migration contract, enter the number of CGS(old) you want to convert, then click Confirm!')}
+        {t('You have successfully approved the migration contract, enter the number of CGS you want to convert, then click Confirm!')}
       </ToastDescriptionWithTx>,
     )
   }
@@ -142,7 +142,7 @@ export default function SwapForMigration() {
                         >
                         {valueWithTokenDecimals.isGreaterThan(cgsOldBalance)
                             ? t('Insufficient Balance')
-                            : t('Exceeded max CGS(old) entry')}
+                            : t('Exceeded max CGS entry')}
                     </Text>
                 )}
                 <Text color="text" fontSize="12px" mb="16px" bold>
@@ -207,11 +207,11 @@ export default function SwapForMigration() {
                 flexDirection="column" 
                 justifyContent="center">
                 <Flex justifyContent="space-between">
-                    <Label>{t('Your CGS(old) to be converted')}</Label>
+                    <Label>{t('Your CGS to be converted')}</Label>
                     <Value>{getBalanceNumber(tokensUnclaimed, 18)}</Value>
                 </Flex>
                 <Flex justifyContent="space-between">
-                    <Label>{t('CGS(new) to receive')}</Label>
+                    <Label>{t('wCGS to receive')}</Label>
                     <Value>{getBalanceNumber(tokensUnclaimed, 18)}</Value>
                 </Flex>
                 <Flex>

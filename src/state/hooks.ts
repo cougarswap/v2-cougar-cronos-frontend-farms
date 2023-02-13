@@ -180,10 +180,10 @@ export const useReferrals = (account): any => {
 // Prices
 
 export const usePriceBnbBusd = (): BigNumber => {
-  const {pid} = lpToken.pairs.cgsUsdc // BUSD-BNB LP anhpvfake croUsdc-cgsUsdc
+  const {pid} = lpToken.pairs.cgsUsdc // BUSD-BNB LP testfake croUsdc-cgsUsdc
   const farm = useFarmFromPid(pid)
   // return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
-  return new BigNumber(1) // anhpv
+  return new BigNumber(1) // test
 }
 
 // export const usePriceCgsMatic = (): BigNumber => {
@@ -216,7 +216,7 @@ export const usePriceCakeBusd = (): BigNumber => {
   const {pid} = lpToken.pairs.cgsUsdc; // EGG-BUSD LP
   const farm = useFarmFromPid(pid);
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
-  // return new BigNumber(1) // anhpv
+  // return new BigNumber(1) // test
 }
 
 export const usePrices = () => {

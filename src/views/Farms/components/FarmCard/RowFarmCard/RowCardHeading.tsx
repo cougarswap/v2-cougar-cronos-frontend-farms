@@ -217,7 +217,7 @@ const RowCardHeading: React.FC<ExpandableSectionProps> = ({
       <td>        
         <InfoColumn>
           <TextTitle>Earned</TextTitle>
-          <Text bold color="textSubTitleFarm">{displayEarningsBalance}&nbsp; CGS</Text>
+          <Text bold color="textSubTitleFarm">{displayEarningsBalance}&nbsp; wCGS</Text>
         </InfoColumn>   
       </td>    
       <InfoColumnWrapper>

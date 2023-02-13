@@ -19,7 +19,7 @@ const ReferralInfo = styled(Card)`
 `
 
 const ReferralHeader  = styled.div`
-background: linear-gradient(90deg, #FFAD02 0%, #FF6C02 100%, #FF6C02 100%);
+background: linear-gradient(166deg,#6e4d05 20%,#6e4527 80%);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 opacity: 0.85;
     padding: 24px;
@@ -35,7 +35,7 @@ const Referrals = () => {
 
     return (
         <Page>
-            <Heading as="h1" size="lg" color="#22398c" mb="20px" style={{ textAlign: 'center', fontSize: '40px' }}>
+            <Heading as="h1" size="lg" color="primaryBright" mb="20px" style={{ textAlign: 'center', fontSize: '40px' }}>
                 {TranslateString(800, 'Cougar Referral Program')}
             </Heading>
             <ReferralInfo>
