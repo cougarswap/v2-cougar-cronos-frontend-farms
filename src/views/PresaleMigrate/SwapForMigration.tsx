@@ -163,7 +163,7 @@ export default function SwapForMigration() {
                             width={24}
                             height={24}
                         />
-                        <Text color='text' ml="4px">CGS</Text>
+                        <Text color='text' ml="4px">wCGS</Text>
                     </Flex>
                 </Flex>
                 <BalanceInput

@@ -2067,7 +2067,7 @@
 
 "@pancakeswap-libs/uikit@file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.8.tgz":
   version "0.26.8"
-  resolved "file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.8.tgz#dd394f291ba1c8bc327bd14deccae2976554ac90"
+  resolved "file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.8.tgz#1f23f74a1093920f8cc12459f7be0305f88038a6"
   dependencies:
     "@popperjs/core" "^2.11.2"
     "@types/lodash" "^4.14.162"
