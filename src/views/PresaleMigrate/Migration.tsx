@@ -95,7 +95,7 @@ export default function Migration() {
                 <PresaleHeading>
                 {t('Migration')}
                 </PresaleHeading>                   
-                <DecorationHeading>{t('Convert old CGS to new CGS')}</DecorationHeading>                 
+                <DecorationHeading>{t('Convert CGS to wCGS')}</DecorationHeading>                 
             </TextHeader>                                                 
         </PresalePageHeader>
         {/* <HeaderCoundown>

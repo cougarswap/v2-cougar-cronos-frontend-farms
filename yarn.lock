@@ -2065,9 +2065,9 @@
     eslint-plugin-react "^7.21.5"
     eslint-plugin-react-hooks "^4.0.0"
 
-"@pancakeswap-libs/uikit@file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.7.tgz":
-  version "0.26.7"
-  resolved "file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.7.tgz#3c466a306f9e9c406922852ee026143af150bf1f"
+"@pancakeswap-libs/uikit@file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.8.tgz":
+  version "0.26.8"
+  resolved "file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.8.tgz#dd394f291ba1c8bc327bd14deccae2976554ac90"
   dependencies:
     "@popperjs/core" "^2.11.2"
     "@types/lodash" "^4.14.162"

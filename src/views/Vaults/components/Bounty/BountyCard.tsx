@@ -54,10 +54,10 @@ const BountyCard = () => {
     <>
       <Text mb="16px">This bounty is given as a reward for providing a service to other users.</Text>
       <Text mb="16px">
-          Whenever you successfully claim the bounty, you’re also helping out by activating the Auto CGS Pool’s compounding function for everyone.
+          Whenever you successfully claim the bounty, you’re also helping out by activating the Auto wCGS Pool’s compounding function for everyone.
       </Text>
       <Text style={{ fontWeight: 'bold' }}>
-        {`Auto-Compound Bounty: ${fee}% of all Auto CGS pool users pending yield`}
+        {`Auto-Compound Bounty: ${fee}% of all Auto wCGS pool users pending yield`}
       </Text>
     </>
   )
@@ -77,7 +77,7 @@ const BountyCard = () => {
           <Flex flexDirection="column">
             <Flex alignItems="center" mb="12px">
               <Text fontSize="16px" bold color="textSubtle" mr="4px">
-                Auto CGS Bounty
+                Auto wCGS Bounty
               </Text>
               <Box ref={targetRef}>
                 <HelpIcon color="textSubtle" />

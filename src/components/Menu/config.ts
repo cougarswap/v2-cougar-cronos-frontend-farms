@@ -7,7 +7,7 @@ const config: MenuEntry[] = [
     href: '/',
   },
   {
-    label: 'Legacy (v1)',
+    label: 'Farming V1',
     icon: 'JungleIcon',
     href: 'https://cronosapp.cougarswap.io/',
     calloutClass: 'highlight' 
@@ -43,7 +43,7 @@ const config: MenuEntry[] = [
         href: 'https://cronosdex.cougarswap.io/#/pool'
       },  
        {
-        label: 'Buy CGS',
+        label: 'Buy wCGS',
         href: 'https://cronosdex.cougarswap.io/#/swap?outputCurrency=0x626779bA9809E9a74cea38bdaE641De5A866Dc59'
       },     
     ],
@@ -54,7 +54,7 @@ const config: MenuEntry[] = [
   //   href: '/presale'   
   // },  
   {
-    label: 'Migration (Start)',
+    label: 'Conversion (wCGS)',
     icon: 'Titanic2Icon', 
     href: '/swap-migrate'   
   },

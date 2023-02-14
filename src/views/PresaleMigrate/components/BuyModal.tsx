@@ -88,12 +88,12 @@ const BuyModal: React.FC<BuyModalProps> = ({ max, usdcPerCake, tokensUnclaimed, 
                 onSelectMax={handleSelectMax}
                 onChange={handleChange}
                 max={fullBalance}
-                symbol={`${tokenName} (old)`}
+                symbol={`${tokenName}`}
                 addLiquidityUrl={usdcLiquidityUrl}
                 inputTitle='Migrate BUY'
             />
             <TokenWillReceive>{`${t(999, 'You will get:')} ${numberTokenWillReceived.toNumber()} CGS`}</TokenWillReceive>
-            <PriceTag>Price: 1 CGS = ${usdcPerCake} CGS (old)</PriceTag>
+            <PriceTag>Price: 1 CGS = ${usdcPerCake} CGS</PriceTag>
             <MaxTokenCanBuy>{`${t(999, 'Max token you can buy:')} ${maxTokenCanBuy} CGS`}</MaxTokenCanBuy>
             <ModalActions>
                 <Button variant="secondary" onClick={onDismiss} disabled={pendingTx}>
@@ -119,7 +119,7 @@ const BuyModal: React.FC<BuyModalProps> = ({ max, usdcPerCake, tokensUnclaimed, 
                 </Button>
             </ModalActions>
             <LinkExternal href={usdcLiquidityUrl} style={{ alignSelf: 'center' }}>
-                {t(999, 'Get CGS (old)')}
+                {t(999, 'Get CGS')}
             </LinkExternal>
         </Modal>
     )

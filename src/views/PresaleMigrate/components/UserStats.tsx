@@ -85,11 +85,11 @@ const UserPresaleStats : React.FC<UserPresaleStatsProps> = ({option}) => {
                 <BuyPresaleTable> 
                     <tbody>   
                         <tr>
-                            <td>Your CGS (old) Balance:</td>
+                            <td>Your CGS Balance:</td>
                             <td className='colored'>{account ? `${getBalanceNumber(usdcBalance, 18)} CGS` : '-'}</td>
                         </tr>                        
                         {/* <tr>
-                            <td>Your CGS (old):</td>
+                            <td>Your CGS:</td>
                             <td className='colored'>{account ? `${getBalanceNumber(tokenBalance)} CGS` : '-'}</td>
                         </tr>     */}
                         <tr>

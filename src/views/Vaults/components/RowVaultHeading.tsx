@@ -167,7 +167,7 @@ const RowVaultHeading : React.FC<RowVaultHeadingProps> = (
 
   const { targetRef, tooltip: tooltipMiddle, tooltipVisible: middleVisible } = useTooltip(tooltipContent, { placement: "top", trigger: "hover" });
   const displayStakingTokenName = useMemo(() => {
-    if (isAutoCgs) return 'Auto CGS'
+    if (isAutoCgs) return 'Auto wCGS'
     if (isManualCgs) return `Manual ${stakingToken.token.symbol}`
     return stakingToken.token.symbol
   }, [isAutoCgs, isManualCgs, stakingToken.token.symbol])

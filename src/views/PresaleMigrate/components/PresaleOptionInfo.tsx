@@ -202,13 +202,13 @@ const PresaleOptionInfo: React.FC<PresaleOptionInfoProps> = ({
                             </tr>
                             <tr>
                                 <td>Presale Price:</td>
-                                <td className='colored highlight-price'>{pricePerToken} CGS (old)</td>
+                                <td className='colored highlight-price'>{pricePerToken} CGS</td>
                             </tr>     
                             <tr>
                                 <td><></></td>
                                 <td className='get-usdc-link'> 
                                     <LinkExternal color="tertiary" href={usdcLiquidityUrl}>
-                                        <span>GET CGS (old)</span>
+                                        <span>GET CGS</span>
                                     </LinkExternal>
                                 </td>
                             </tr>                                                      

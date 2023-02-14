@@ -123,7 +123,7 @@
     {
       "data": {
         "stringId": 320,
-        "text": "Stake LP tokens to earn CGS"
+        "text": "Stake LP tokens to earn wCGS"
       }
     },
     {
@@ -1239,7 +1239,7 @@
     {
       "data": {
         "stringId": 10002,
-        "text": "Stake tokens to earn CGS"
+        "text": "Stake tokens to earn wCGS"
       }
     },
     {
