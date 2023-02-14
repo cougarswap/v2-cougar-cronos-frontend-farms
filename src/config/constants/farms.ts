@@ -35,13 +35,13 @@ const farms: FarmConfig[] = [
       97: '',
       25: lpTokens.pairs.cgsWcro.address,
     },
-    tokenSymbol: 'CGS',
+    tokenSymbol: 'CRO',
     tokenAddresses: {
       97: '',
-      25: tokens.cgs,
+      25: tokens.wcro,
     },
-    quoteTokenSymbol: QuoteToken.CRO,
-    quoteTokenAdresses: contracts.wcro,
+    quoteTokenSymbol: QuoteToken.CGS,
+    quoteTokenAdresses: contracts.cake,
     dex: DexSwapRouter.COUGAREXCHANGE
   },
   {
