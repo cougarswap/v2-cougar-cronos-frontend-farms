@@ -19,7 +19,7 @@ const ConvertCgsAnnouncement = () => {
     return (
         <Wrapper color='binance'>
             The farming has been temporarily suspended<br />
-            YOU CAN CONVERT CGS TO NEW CGS AFTER MIGRATION WITH A RATE OF 1:1 
+            YOU CAN CONVERT CGS TO NEW CGS AFTER CONVERSION WITH A RATE OF 1:1 
         </Wrapper>
     )
 }
