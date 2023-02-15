@@ -1122,6 +1122,15 @@
     "@web3-react/walletlink-connector" "^6.1.1"
     jsbi "^3.1.1"
 
+"@clover-network/clover-connector@^1.0.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@clover-network/clover-connector/-/clover-connector-1.1.0.tgz#be63693eb8220b9e4639f1aad1ce02470ef6204a"
+  integrity sha512-a4U4016vTYcO3Fp2FThitO82j0J94rcE1t2cF38ePCWp/FxqY4AcPWDv9I+SguE+p/MMF4zoMELT1eDEDDGLqA==
+  dependencies:
+    "@web3-react/abstract-connector" "^6.0.7"
+    "@web3-react/types" "^6.0.7"
+    tiny-warning "^1.0.3"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -2065,9 +2074,9 @@
     eslint-plugin-react "^7.21.5"
     eslint-plugin-react-hooks "^4.0.0"
 
-"@pancakeswap-libs/uikit@file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.8.tgz":
-  version "0.26.8"
-  resolved "file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.8.tgz#1f23f74a1093920f8cc12459f7be0305f88038a6"
+"@pancakeswap-libs/uikit@file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.9.tgz":
+  version "0.26.9"
+  resolved "file:../v2-cougar-cronos-uikit/pancakeswap-libs-uikit-v0.26.9.tgz#b535e8930a3a352421a8bf399aae5aeebbd6cb5c"
   dependencies:
     "@popperjs/core" "^2.11.2"
     "@types/lodash" "^4.14.162"

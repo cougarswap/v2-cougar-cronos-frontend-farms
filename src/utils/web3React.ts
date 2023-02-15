@@ -6,6 +6,7 @@ import { ConnectorNames } from '@pancakeswap-libs/uikit'
 import Web3 from 'web3'
 import { DeFiWeb3Connector } from 'deficonnect'
 import { TalismanConnector } from '@talismn/web3react-v6-connector'
+import { CloverConnector } from '@clover-network/clover-connector'
 import getNodeUrl from './getRpcUrl'
 
 const POLLING_INTERVAL = 12000
@@ -35,6 +36,8 @@ const coinbaseConnector = new WalletLinkConnector({
   supportedChainIds: [chainId],
 })
 
+const cloverConnect = new CloverConnector({ supportedChainIds: [chainId] })
+
 const talisman = new TalismanConnector({
   supportedChainIds: [1, 3, 4, 5, 42, 81, 100, 137, 336, 592, 595, 1284, 1285, 1287, 42161]
 })
@@ -44,8 +47,8 @@ export const connectorsByName: { [connectorName in ConnectorNames]: any } = {
   [ConnectorNames.WalletConnect]: walletconnect,
   [ConnectorNames.BSC]: bscConnector,  
   [ConnectorNames.CDCDefiWallet]: defiWalletConnect,
+  [ConnectorNames.CloverWallet]: cloverConnect,
   [ConnectorNames.CoinBase]: coinbaseConnector,
-  [ConnectorNames.Talisman]: talisman,
 }
 
 export const getLibrary = (provider): Web3 => {
